@@ -1,15 +1,19 @@
+import Image from "next/image";
+
 const featuredWorks = [
   {
     title: "WithBuddy",
     description: "반복되는 온보딩 응대를 자동화한 AI 온보딩 SaaS 서비스",
     meta: "B2B SaaS · AI · Product Design · 2026",
     href: "/work/withbuddy",
+    thumbnail: "/images/withbuddy-thumbnail-v2.png"
   },
   {
     title: "Artie",
     description: "전시 탐색 경험을 개인화한 AI 전시 추천 플랫폼",
     meta: "AI Recommendation · UX Research · 2025",
     href: "/work/artie",
+    thumbnail: null,
   },
 ];
 
@@ -30,7 +34,7 @@ const otherWorks = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white px-6 py-20 text-zinc-950">
+    <main className="min-h-screen bg-white px-4 py-24 text-zinc-950">
       <div className="mx-auto max-w-5xl">
         <section className="mb-16">
           <p className="mb-5 text-sm text-zinc-500">Product Designer</p>
@@ -96,8 +100,20 @@ export default function Home() {
                 href={work.href}
                 className="group rounded-[1.5rem] border border-zinc-200 bg-white p-3 transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-lg"
               >
-                <div className="mb-4 flex aspect-[16/10] items-center justify-center rounded-[1.1rem] bg-zinc-100 text-sm text-zinc-400">
-                  Thumbnail
+                  <div className="mb-4 aspect-video overflow-hidden rounded-[1.1rem] bg-zinc-100">
+                    {work.thumbnail ? (
+                      <Image
+                        src={work.thumbnail}
+                        alt={`${work.title} Thumbnail`}
+                        width={1920}
+                        height={1080}
+                        className="h-full w-full object-cover"
+                      />
+                  ) : (
+                      <div className="flex h-full items-center justify-center text-sm text-zinc-400">
+                        Thumbnail
+                      </div>
+                  )}
                 </div>
 
                 <div className="px-2 pb-3">
@@ -168,12 +184,21 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="mb-3 text-sm text-zinc-500">Contact</p>
               <p className="text-sm leading-relaxed text-zinc-600">
                 xhkdm1116@gmail.com
                 <br />
-                GitHub
+
+                <a
+                  href="https://github.com/xhkdm1/xhkdmportfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-600 hover:text-zinc-900"
+                >
+                  GitHub
+                </a>
+
                 <br />
+
                 LinkedIn
               </p>
             </div>
