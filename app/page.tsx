@@ -5,14 +5,14 @@ const featuredWorks = [
     title: "WithBuddy",
     description: "반복되는 온보딩 응대를 자동화한 AI 온보딩 SaaS 서비스",
     meta: "B2B SaaS · AI · Product Design · 2026",
-    href: "/work/withbuddy",
+    href: "/projects/withbuddy",
     thumbnail: "/images/withbuddy-thumbnail-v2.png"
   },
   {
     title: "Artie",
     description: "전시 탐색 경험을 개인화한 AI 전시 추천 플랫폼",
     meta: "AI Recommendation · UX Research · 2025",
-    href: "/work/artie",
+    href: "/projects/artie",
     thumbnail: null,
   },
 ];
@@ -22,13 +22,13 @@ const otherWorks = [
     title: "Tutti",
     description: "자격증 준비 과정을 함께 지속하게 만드는 커뮤니티 서비스",
     meta: "Community · UX/UI · 2024",
-    href: "/work/tutti",
+    href: "/projects/tutti",
   },
   {
     title: "I Got This",
     description: "가짜 정보를 판별하고 신뢰도를 확인하는 정보 검증 서비스",
     meta: "Fact Check · AI Concept · 2024",
-    href: "/work/i-got-this",
+    href: "/projects/i-got-this",
   },
 ];
 

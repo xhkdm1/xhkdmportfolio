@@ -4,22 +4,22 @@ const resources = [
   {
     title: "Case Study",
     description: "문제 정의부터 의사결정, 검증 과정까지 담은 프로젝트 기록",
-    href: "/work/withbuddy/case-study",
+    href: "/projects/withbuddy/case-study",
   },
   {
     title: "Design System (WDS)",
     description: "컴포넌트, 토큰, 네이밍 규칙을 정의한 디자인 시스템",
-    href: "/work/withbuddy/wds",
+    href: "/projects/withbuddy/wds",
   },
   {
     title: "QA Guide",
     description: "Product Quality Week를 위해 제작한 QA 가이드 문서",
-    href: "/work/withbuddy/qa-guide",
+    href: "/projects/withbuddy/qa-guide",
   },
   {
     title: "Information Architecture",
     description: "관리자와 신입사원 관점에서 설계한 정보 구조",
-    href: "/work/withbuddy/ia",
+    href: "/projects/withbuddy/ia",
   },
 ];
 

@@ -6,7 +6,7 @@ export default function WDSPage() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-3 text-sm text-zinc-500">
             <Link
-                href="/work/withbuddy"
+                href="/projects/withbuddy"
                 className="hover:text-zinc-900"
             >
                 WithBuddy
