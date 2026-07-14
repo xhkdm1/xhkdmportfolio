@@ -26,7 +26,7 @@ export default function WDSPage() {
         </p>
 
         <a
-          href="https://www.figma.com/design/napjZ2Pw9ctp50W6rOBPRi/3%ED%8C%80_WDS?node-id=1-4907&t=oRhiPByzdiVATfEa-1"
+          href="https://www.figma.com/design/aM6xVXn64liN8cinzkjMg4/WDS-3%ED%8C%80_%EC%9D%BC%EB%8B%A8%EB%AA%A8%EC%97%AC-?node-id=3-4423&t=YDHDFH9xBWgHTXgJ-1"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-2xl border border-zinc-200 px-5 py-3 text-sm font-medium transition hover:bg-zinc-50"

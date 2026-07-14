@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-24 text-zinc-950">
-      <div className="mx-auto max-w-3xl">
+      <div className="mx-auto max-w-5xl">
 
         <p className="mb-4 text-sm text-zinc-500">
           Contact
