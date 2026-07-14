@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 const LANDING_URL =
-  "https://landing-6jhzo92pk-xhkdm1s-projects.vercel.app/";
+  "https://landing-psi-ashen-98.vercel.app/";
 const WDS_URL =
   "https://www.figma.com/design/aM6xVXn64liN8cinzkjMg4/WDS-3%ED%8C%80_%EC%9D%BC%EB%8B%A8%EB%AA%A8%EC%97%AC-?node-id=3-4423&t=YDHDFH9xBWgHTXgJ-1";
 

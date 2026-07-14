@@ -4,7 +4,7 @@ import Link from "next/link";
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 
 const LANDING_URL =
-  "https://landing-6jhzo92pk-xhkdm1s-projects.vercel.app/";
+  "https://landing-psi-ashen-98.vercel.app/";
 
 const contributions = [
   {

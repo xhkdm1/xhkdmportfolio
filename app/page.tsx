@@ -6,7 +6,7 @@ const featuredWorks = [
     description: "반복되는 온보딩 응대를 자동화한 AI 온보딩 SaaS 서비스",
     meta: "B2B SaaS · AI Agent · Product Design · 2026",
     href: "/projects/withbuddy",
-    liveUrl: "https://landing-6jhzo92pk-xhkdm1s-projects.vercel.app/",
+    liveUrl: "https://landing-psi-ashen-98.vercel.app/",
     thumbnail: "/images/withbuddy-thumbnail-v2.png",
   },
   {
