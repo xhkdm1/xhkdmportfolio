@@ -17,6 +17,14 @@ const featuredWorks = [
     liveUrl: null,
     thumbnail: null,
   },
+  {
+    title: "PADO",
+    description:
+      "팬의 창작과 참여를 중심으로 새로운 팬덤 경험을 제안한 플랫폼",
+    meta: "Fan Platform · Product Concept · UX/UI Design · 2025",
+    href: "/projects/pado",
+    thumbnail: "/images/pado/pado-cover.png",
+  },
 ];
 
 const otherWorks = [
