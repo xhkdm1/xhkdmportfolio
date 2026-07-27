@@ -15,7 +15,7 @@ const featuredWorks = [
     meta: "AI Recommendation · UX Research · 2025",
     href: "/projects/artie",
     liveUrl: null,
-    thumbnail: null,
+    thumbnail: "/images/artie-thumbnail.png",
   },
   {
     title: "PADO",
