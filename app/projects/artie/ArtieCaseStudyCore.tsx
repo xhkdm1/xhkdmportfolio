@@ -1,4 +1,3 @@
-import Image from "next/image";
 import type { ReactNode } from "react";
 
 type JourneyStep = {
@@ -316,7 +315,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
             ))}
           </dl>
 
-          <div className="mt-14 overflow-hidden rounded-[2rem]">
+          {/* <div className="mt-14 overflow-hidden rounded-[2rem]">
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/images/artie/thumbnail.png"
@@ -327,7 +326,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
                 className="object-contain"
               />
             </div>
-          </div>
+          </div> */}
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a
