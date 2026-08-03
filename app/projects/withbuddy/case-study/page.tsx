@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
+import BackToTop from "./BackToTop";
 
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 const LANDING_URL =
@@ -803,6 +804,7 @@ export default function WithBuddyCaseStudyPage() {
           </Link>
         </div>
       </div>
+      <BackToTop/>
     </main>
   );
 }

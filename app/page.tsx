@@ -10,11 +10,20 @@ const featuredWorks = [
     thumbnail: "/images/withbuddy-thumbnail-v2.png",
   },
   {
+    title: "배달의민족 장바구니 개선",
+    description:
+      "여러 가게를 비교하는 사용자의 탐색 행동을 검증하고 장바구니 비교 경험을 탐색한 UX 리서치 프로젝트",
+    meta: "UX Research · Concept Test · Product Thinking · 2026",
+    href: "/projects/baemin",
+    liveUrl: null,
+    thumbnail: "/images/baemin-thumbnail.png",
+  },
+  {
     title: "Artie",
     description: "전시 탐색 경험을 개인화한 AI 전시 추천 플랫폼",
     meta: "AI Recommendation · UX Research · 2025",
     href: "/projects/artie",
-    liveUrl: null,
+    liveUrl: "https://artie-blond.vercel.app/",
     thumbnail: "/images/artie-thumbnail.png",
   },
   {
@@ -23,6 +32,7 @@ const featuredWorks = [
       "팬의 창작과 참여를 중심으로 새로운 팬덤 경험을 제안한 플랫폼",
     meta: "Fan Platform · Product Concept · UX/UI Design · 2025",
     href: "/projects/pado",
+    liveUrl: null,
     thumbnail: "/images/pado/pado-cover.png",
   },
 ];

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 
 const LANDING_URL =
