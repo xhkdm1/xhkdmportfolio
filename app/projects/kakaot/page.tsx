@@ -151,7 +151,7 @@ const directions = [
       "업데이트할 만큼 변화가 큰지 불분명",
       "확장 서비스 인식 개선 효과가 제한적일 수 있음",
     ],
-    image: "/projects/kakaot/direction-01.webp",
+    image: "/images/kakaot/direction-01.webp",
   },
   {
     number: "02",
@@ -168,7 +168,7 @@ const directions = [
       "기존 광고 비즈니스 모델과 충돌 가능",
       "광고 클릭률 감소 우려",
     ],
-    image: "/projects/kakaot/direction-02.webp",
+    image: "/images/kakaot/direction-02.webp",
   },
   {
     number: "03",
@@ -185,7 +185,7 @@ const directions = [
       "맥락별 구분의 의미가 약해질 수 있음",
       "기능 밀도가 다시 높아질 위험",
     ],
-    image: "/projects/kakaot/direction-03.webp",
+    image: "/images/kakaot/direction-03.webp",
   },
 ];
 
@@ -216,14 +216,14 @@ export default function KakaoTCaseStudyPage() {
       {/* HERO */}
       <section
         id="top"
-        className="mx-auto max-w-[1440px] px-5 pb-24 pt-16 md:px-10 md:pb-32 md:pt-24 lg:px-16"
+        className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40"
       >
         <FadeIn>
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.24em] text-[#77776F]">
+          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#77776F]">
             UX Research · Information Architecture · 2026
           </p>
 
-          <h1 className="text-[clamp(4rem,10vw,9rem)] font-semibold leading-[0.86] tracking-[-0.07em]">
+          <h1 className="mt-3 text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
             Kakao T
             <br />
             Home Redesign
@@ -233,12 +233,12 @@ export default function KakaoTCaseStudyPage() {
         <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <FadeIn delay={0.08}>
             <div>
-              <p className="max-w-xl text-xl leading-9 text-[#484842] md:text-2xl md:leading-10">
+              <p className="max-w-3xl text-lg leading-8 text-[#484842] sm:text-xl sm:leading-9">
                 사용자는 카카오T를 여전히 ‘택시 앱’으로 인식하고 있었지만,
                 서비스는 통합 이동 플랫폼으로 빠르게 확장되고 있었습니다.
               </p>
 
-              <p className="mt-6 max-w-xl text-base leading-8 text-[#6A6A63] md:text-lg">
+              <p className="mt-5 max-w-3xl text-base leading-7 text-[#6A6A63] sm:text-lg sm:leading-8">
                 이 간극이 실제 홈 화면 탐색 행동에 어떤 영향을 주는지
                 확인하고, 사용자의 기존 이용 습관을 유지하면서 다양한 이동
                 서비스를 발견할 수 있는 정보구조를 탐색했습니다.
@@ -248,7 +248,7 @@ export default function KakaoTCaseStudyPage() {
 
           <FadeIn delay={0.16}>
             <ImagePlaceholder
-              src="/projects/kakaot/hero.webp"
+              src="/images/kakaot/hero.webp"
               label="카카오T 홈 화면 대표 목업"
               ratio="wide"
             />
@@ -275,22 +275,22 @@ export default function KakaoTCaseStudyPage() {
       </section>
 
       {/* OVERVIEW */}
-      <section className="border-y border-[#E3E3DC] bg-white">
-        <div className="mx-auto grid max-w-[1440px] md:grid-cols-4">
+      <section id="overview" className="border-y border-[#E3E3DC] bg-white">
+        <div className="mx-auto grid w-full max-w-6xl px-5 sm:px-8 md:grid-cols-4 lg:px-12">
           {overview.map((item, index) => (
             <div
               key={item.label}
-              className={`px-5 py-7 md:px-8 ${
+              className={`py-7 ${
                 index > 0
-                  ? "border-t border-[#E3E3DC] md:border-l md:border-t-0"
+                  ? "border-t border-[#E3E3DC] md:border-l md:border-t-0 md:pl-8"
                   : ""
               }`}
             >
-              <p className="text-xs uppercase tracking-[0.18em] text-[#77776F]">
+              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#77776F]">
                 {item.label}
               </p>
 
-              <p className="mt-2 font-medium">{item.value}</p>
+              <p className="mt-2 text-sm font-medium leading-6">{item.value}</p>
             </div>
           ))}
         </div>
@@ -353,7 +353,7 @@ export default function KakaoTCaseStudyPage() {
 
       {/* RESEARCH */}
       <section id="research" className="bg-[#ECECE6]">
-        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-16 lg:py-36">
+        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
           <SectionHeading
             index="02"
             eyebrow="Research"
@@ -363,7 +363,7 @@ export default function KakaoTCaseStudyPage() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             <FadeIn>
-              <article className="rounded-[32px] border border-[#E3E3DC] bg-white p-7 md:p-10">
+              <article id="review-analysis" className="rounded-[32px] border border-[#E3E3DC] bg-white p-7 md:p-10">
                 <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#77776F]">
                   Review Analysis
                 </p>
@@ -394,7 +394,7 @@ export default function KakaoTCaseStudyPage() {
             </FadeIn>
 
             <FadeIn delay={0.08}>
-              <article className="rounded-[32px] bg-[#FEE500] p-7 md:p-10">
+              <article id="hypothesis" className="rounded-[32px] bg-[#FEE500] p-7 md:p-10">
                 <p className="mb-6 text-xs font-semibold uppercase tracking-[0.2em] text-black/50">
                   Hypothesis
                 </p>
@@ -431,7 +431,7 @@ export default function KakaoTCaseStudyPage() {
           </div>
 
           {/* SURVEY */}
-          <div className="mt-16">
+          <div id="survey" className="mt-16">
             <div className="mb-8">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#77776F]">
                 Survey
@@ -486,7 +486,7 @@ export default function KakaoTCaseStudyPage() {
 
           {/* VALIDATION */}
           <FadeIn>
-            <article className="mt-8 rounded-[32px] bg-[#151515] p-7 text-white md:p-10">
+            <article id="validation" className="mt-8 rounded-[32px] bg-[#151515] p-7 text-white md:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                 Validation
               </p>
@@ -569,8 +569,8 @@ export default function KakaoTCaseStudyPage() {
       </Section>
 
       {/* FLOW */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-16 lg:py-36">
+      <section id="user-flow" className="bg-white">
+        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
           <SectionHeading
             index="04"
             eyebrow="User Flow"
@@ -669,8 +669,8 @@ export default function KakaoTCaseStudyPage() {
       </Section>
 
       {/* DECISION */}
-      <section className="bg-[#151515] text-white">
-        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-16 lg:py-36">
+      <section id="decision" className="bg-[#151515] text-white">
+        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
           <SectionHeading
             index="06"
             eyebrow="Decision"
@@ -726,7 +726,7 @@ export default function KakaoTCaseStudyPage() {
 
               <div className="mt-8">
                 <ImagePlaceholder
-                  src="/projects/kakaot/promotion-before-after.webp"
+                  src="/images/kakaot/promotion-before-after.webp"
                   label="기존 프로모션과 띠 배너 검토안 비교"
                   ratio="wide"
                   dark
@@ -748,19 +748,19 @@ export default function KakaoTCaseStudyPage() {
 
         <div className="grid gap-6 lg:grid-cols-3">
           <ImagePlaceholder
-            src="/projects/kakaot/ia-current.webp"
+            src="/images/kakaot/ia-current.webp"
             label="기존 UI IA"
             ratio="wide"
           />
 
           <ImagePlaceholder
-            src="/projects/kakaot/ia-a.webp"
+            src="/images/kakaot/ia-a.webp"
             label="개선 UI-A IA"
             ratio="wide"
           />
 
           <ImagePlaceholder
-            src="/projects/kakaot/ia-b.webp"
+            src="/images/kakaot/ia-b.webp"
             label="개선 UI-B IA"
             ratio="wide"
           />
@@ -773,7 +773,7 @@ export default function KakaoTCaseStudyPage() {
             </p>
 
             <ImagePlaceholder
-              src="/projects/kakaot/wireframe-a.webp"
+              src="/images/kakaot/wireframe-a.webp"
               label="와이어프레임 개선안 A"
               ratio="portrait"
             />
@@ -785,7 +785,7 @@ export default function KakaoTCaseStudyPage() {
             </p>
 
             <ImagePlaceholder
-              src="/projects/kakaot/wireframe-b.webp"
+              src="/images/kakaot/wireframe-b.webp"
               label="와이어프레임 개선안 B"
               ratio="portrait"
             />
@@ -795,7 +795,7 @@ export default function KakaoTCaseStudyPage() {
 
       {/* OUTCOME */}
       <section id="outcome" className="bg-[#FEE500]">
-        <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-16 lg:py-36">
+        <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
           <SectionHeading
             index="08"
             eyebrow="Outcome"
@@ -887,7 +887,7 @@ export default function KakaoTCaseStudyPage() {
 
 function Header() {
   return (
-    <header className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
+    <header className="mx-auto flex h-20 w-full max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-12">
       <a href="#top" className="text-sm font-semibold">
         HYEJIN · PORTFOLIO
       </a>
@@ -923,7 +923,7 @@ function Section({
   return (
     <section
       id={id}
-      className="mx-auto max-w-[1440px] px-5 py-24 md:px-10 md:py-32 lg:px-16 lg:py-36"
+      className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
     >
       {children}
     </section>
@@ -954,13 +954,13 @@ function SectionHeading({
       </p>
 
       <div>
-        <h2 className="max-w-5xl text-3xl font-semibold leading-tight tracking-[-0.045em] md:text-5xl">
+        <h2 className="max-w-5xl text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
         {description && (
           <p
-            className={`mt-6 max-w-3xl text-lg leading-8 md:text-xl ${
+            className={`mt-5 max-w-3xl text-base leading-7 sm:text-lg sm:leading-8 ${
               dark ? "text-white/55" : "text-[#66665F]"
             }`}
           >
@@ -1194,7 +1194,7 @@ function ImagePlaceholder({
 function Footer() {
   return (
     <footer className="border-t border-[#E3E3DC] bg-white">
-      <div className="mx-auto flex max-w-[1440px] flex-col gap-6 px-5 py-12 md:flex-row md:items-center md:justify-between md:px-10 lg:px-16">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 py-12 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12">
         <div>
           <p className="text-sm text-[#77776F]">Next project</p>
 

@@ -73,20 +73,20 @@ const resources = [
 
 export default function WithBuddyPage() {
   return (
-    <main className="min-h-screen bg-white px-6 py-20 text-zinc-950">
-      <div className="mx-auto max-w-5xl">
+    <main className="min-h-screen bg-white text-zinc-950">
+      <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-12">
         {/* Hero */}
-        <section className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+        <section className="grid gap-10 pb-20 pt-28 sm:pb-28 sm:pt-36 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:pb-32 lg:pt-40">
           <div>
             <p className="mb-3 text-sm text-zinc-500">
               B2B SaaS · AI Agent · Product Design
             </p>
 
-            <h1 className="mb-6 text-5xl font-semibold tracking-tight">
+            <h1 className="mt-3 text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
               WithBuddy
             </h1>
 
-            <p className="max-w-xl text-lg leading-relaxed text-zinc-600">
+            <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
               반복되는 온보딩 문의를 문서 기반 AI가 먼저 처리하고,
               담당자가 핵심 업무에 집중할 수 있도록 설계한 AI 온보딩
               에이전트입니다.
@@ -148,13 +148,13 @@ export default function WithBuddyPage() {
         </section>
 
         {/* Documentation */}
-        <section className="mt-20 border-t border-zinc-200 pt-16">
-          <div className="mb-8">
-            <p className="mb-2 text-sm text-zinc-500">
+        <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm text-zinc-500">
               Project Documentation
             </p>
 
-            <h2 className="text-3xl font-semibold tracking-tight">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
               프로젝트 과정과 산출물
             </h2>
           </div>
@@ -191,15 +191,15 @@ export default function WithBuddyPage() {
         </section>
 
         {/* Contribution */}
-        <section className="mt-20 border-t border-zinc-200 pt-16">
-          <div className="mb-10 max-w-2xl">
-            <p className="mb-2 text-sm text-zinc-500">My Contribution</p>
+        <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
+          <div className="mb-10 max-w-3xl">
+            <p className="text-sm text-zinc-500">My Contribution</p>
 
-            <h2 className="text-3xl font-semibold tracking-tight">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
               이 프로젝트에서 담당한 역할
             </h2>
 
-            <p className="mt-4 text-base leading-relaxed text-zinc-600">
+            <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
               리서치에서 발견한 문제를 제품 구조와 화면으로 구체화하고,
               디자인 시스템과 핸드오프 기준까지 연결했습니다.
             </p>

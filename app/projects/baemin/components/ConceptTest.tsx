@@ -106,7 +106,7 @@ export default function ConceptTest() {
   return (
     <section
       id="concept-test"
-      className="bg-zinc-50 px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40"
+      className="bg-zinc-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
     >
       <div className="mx-auto max-w-6xl">
         <header className="max-w-4xl">
@@ -114,7 +114,7 @@ export default function ConceptTest() {
             Concept Test
           </p>
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             비교 상태를 유지하는 방법을
             <br />
             두 가지 구조로 나누어 검증했습니다.

@@ -242,17 +242,17 @@ function Section({
   return (
     <section
       id={id}
-      className="scroll-mt-28 border-t border-zinc-200 py-24"
+      className="scroll-mt-28 border-t border-zinc-200 py-20 sm:py-24 lg:py-28"
     >
       <div className="mb-12 max-w-3xl">
         <p className="mb-3 text-sm font-medium text-zinc-500">{eyebrow}</p>
 
-        <h2 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
         {description && (
-          <p className="mt-5 text-base leading-8 text-zinc-600 sm:text-lg">
+          <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             {description}
           </p>
         )}
@@ -392,8 +392,8 @@ function SolutionSection({
 
 export default function PadoPage() {
   return (
-    <main className="min-h-screen bg-white px-4 pb-24 pt-24 text-zinc-950 sm:px-6">
-      <div className="mx-auto max-w-5xl">
+    <main className="min-h-screen bg-white text-zinc-950">
+      <div className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="mb-10 text-sm text-zinc-500">
           <Link href="/" className="transition hover:text-zinc-900">
             Home
@@ -406,14 +406,14 @@ export default function PadoPage() {
           <span>PADO</span>
         </div>
 
-        <section className="pb-24">
+        <section className="pb-20 sm:pb-28 lg:pb-32">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
             <div>
               <p className="mb-5 text-sm font-medium text-zinc-500">
                 Fan Platform · Product Concept · UX/UI Design
               </p>
 
-              <h1 className="text-6xl font-semibold tracking-tight sm:text-7xl">
+              <h1 className="text-5xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
                 PADO
               </h1>
 
@@ -423,7 +423,7 @@ export default function PadoPage() {
                 팬 활동의 흐름을 다시 설계했습니다.
               </p>
 
-              <p className="mt-7 max-w-xl text-base leading-8 text-zinc-600">
+              <p className="mt-7 max-w-3xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
                 팬들이 라이브를 본 뒤 콘텐츠를 재해석하고 공유하며
                 새로운 대화를 만드는 행동에 주목했습니다. 콘텐츠 소비
                 중심의 경험을 넘어 팬의 창작과 참여가 다시 팬덤의
@@ -474,8 +474,8 @@ export default function PadoPage() {
           </div>
         </section>
 
-        <nav className="sticky top-16 z-20 -mx-4 overflow-x-auto border-y border-zinc-200 bg-white/90 px-4 backdrop-blur sm:-mx-6 sm:px-6">
-          <div className="mx-auto flex max-w-5xl gap-6 py-4">
+        <nav className="sticky top-16 z-20 -mx-5 overflow-x-auto border-y border-zinc-200 bg-white/90 px-5 backdrop-blur sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+          <div className="mx-auto flex w-full gap-6 py-4">
             {navigation.map((item) => (
               <a
                 key={item.href}
@@ -997,7 +997,7 @@ export default function PadoPage() {
           </div>
         </Section>
 
-        <section className="border-t border-zinc-200 py-20">
+        <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
           <p className="text-sm font-medium text-zinc-500">
             Research Sources
           </p>

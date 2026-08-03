@@ -126,19 +126,19 @@ function Section({
   return (
     <section
       id={id}
-      className="scroll-mt-28 border-t border-zinc-200 py-24"
+      className="scroll-mt-28 border-t border-zinc-200 py-20 sm:py-24 lg:py-28"
     >
       <div className="mb-12 max-w-3xl">
         <p className="mb-3 text-sm font-medium text-zinc-500">
           {eyebrow}
         </p>
 
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
 
         {description && (
-          <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg">
+          <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             {description}
           </p>
         )}
@@ -175,8 +175,8 @@ function VisualPlaceholder({
 
 export default function WDSPage() {
   return (
-    <main className="min-h-screen bg-white px-6 pb-24 pt-20 text-zinc-950">
-      <div className="mx-auto max-w-5xl">
+    <main className="min-h-screen bg-white text-zinc-950">
+      <div className="mx-auto w-full max-w-5xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
         {/* Breadcrumb */}
         <div className="mb-8 text-sm text-zinc-500">
           <Link
@@ -192,18 +192,18 @@ export default function WDSPage() {
         </div>
 
         {/* Hero */}
-        <section className="pb-24">
+        <section className="pb-20 sm:pb-28 lg:pb-32">
           <p className="mb-4 text-sm font-medium text-zinc-500">
             Design System · Documentation · AI Collaboration
           </p>
 
-          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
             문서를 넘어,
             <br />
             협업과 구현을 잇는 인터페이스
           </h1>
 
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600">
+          <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
             프로젝트 중간중간 만들어진 컴포넌트를 단순히 모으는 데서
             끝내지 않고, 디자이너와 개발자, AI 도구가 같은 기준으로
             이해하고 유지할 수 있는 시스템으로 재구성했습니다.
@@ -269,8 +269,8 @@ export default function WDSPage() {
         </section>
 
         {/* Sticky nav */}
-        <nav className="sticky top-16 z-20 -mx-6 overflow-x-auto border-y border-zinc-200 bg-white/90 px-6 backdrop-blur">
-          <div className="mx-auto flex max-w-5xl gap-6 py-4">
+        <nav className="sticky top-16 z-20 -mx-5 overflow-x-auto border-y border-zinc-200 bg-white/90 px-5 backdrop-blur sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+          <div className="mx-auto flex w-full gap-6 py-4">
             {navigation.map((item) => (
               <a
                 key={item.href}
