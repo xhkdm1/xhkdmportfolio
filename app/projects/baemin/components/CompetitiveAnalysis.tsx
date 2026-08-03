@@ -26,13 +26,13 @@ const benchmarkPatterns = [
 
 export default function CompetitiveAnalysis() {
   return (
-    <section className="bg-zinc-50 px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+    <section className="bg-zinc-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
             Competitive Analysis
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             비교 경험은 새로운 기능이 아니라,
             <br />
             이미 다른 서비스에서 반복되는 패턴이었습니다.

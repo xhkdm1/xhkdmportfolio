@@ -165,7 +165,7 @@ function SectionTitle({
   return (
     <div className="max-w-4xl">
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
+      <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (
@@ -280,12 +280,12 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#FFF5F5] px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-36 lg:pt-44">
+      <section className="bg-[#FFF5F5] px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-5xl">
             <Eyebrow>Artie · AI Exhibition Matching Platform</Eyebrow>
 
-            <h1 className="mt-6 text-4xl font-semibold tracking-[-0.055em] text-zinc-950 sm:text-6xl lg:text-7xl lg:leading-[1.08]">
+            <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-[-0.055em] text-zinc-950 sm:text-6xl lg:text-7xl">
               관람자에게는 전시 발견을,
               <br />
               창작자에게는 공간 탐색을 연결했습니다.
@@ -345,7 +345,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       </section>
 
       {/* Background */}
-      <section className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Background"
@@ -420,7 +420,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       {researchSlot}
 
       {/* MVP */}
-      <section className="bg-zinc-50 px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-zinc-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="MVP Scope"
@@ -482,7 +482,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       </section>
 
       {/* Journey */}
-      <section className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="User Journey"
@@ -513,7 +513,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       </section>
 
       {/* Core Experience 01 */}
-      <section className="bg-[#FFF5F5] px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-[#FFF5F5] px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Core Experience 01"
@@ -535,7 +535,7 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       </section>
 
       {/* Core Experience 02 */}
-      <section className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionTitle
             eyebrow="Core Experience 02"
@@ -557,13 +557,13 @@ export default function ArtieCaseStudyCore({ researchSlot }: { researchSlot?: Re
       </section>
 
       {/* Design Decision */}
-      <section className="bg-zinc-950 px-5 py-24 text-white sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+      <section className="bg-zinc-950 px-5 py-20 text-white sm:px-8 sm:py-24 lg:px-12 lg:py-28">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-4xl">
             <p className="text-sm font-semibold tracking-[0.16em] text-zinc-400 uppercase">
               Design Decisions
             </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] sm:text-4xl lg:text-5xl">
+            <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
               기능을 추가하는 것보다, 사용자가 판단해야 하는 순간을
               정리하는 데 집중했습니다.
             </h2>

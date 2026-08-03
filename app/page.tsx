@@ -23,9 +23,9 @@ const featuredWorks = [
   description:
     "택시 앱으로 학습된 사용자 인식과 통합 이동 플랫폼의 확장 방향 사이의 간극을 확인하고, 홈화면 정보구조의 대안을 탐색한 UX 프로젝트",
   meta: "UX Research · Information Architecture · Product Thinking · 2026",
-  href: "/projects/kakaoT",
+  href: "/projects/kakaot",
   liveUrl: null,
-  thumbnail: "/images/kakaot-thumbnail.png",
+  thumbnail: "/images/kakaot/kakaot-thumbnail.png",
 },
   {
     title: "Artie",
@@ -35,18 +35,16 @@ const featuredWorks = [
     liveUrl: "https://artie-blond.vercel.app/",
     thumbnail: "/images/artie-thumbnail.png",
   },
+];
+
+const otherWorks = [
   {
     title: "PADO",
     description:
       "팬의 창작과 참여를 중심으로 새로운 팬덤 경험을 제안한 플랫폼",
     meta: "Fan Platform · Product Concept · UX/UI Design · 2025",
     href: "/projects/pado",
-    liveUrl: null,
-    thumbnail: "/images/pado/pado-cover.png",
   },
-];
-
-const otherWorks = [
   {
     title: "Tutti",
     description: "자격증 준비 과정을 함께 지속하게 만드는 커뮤니티 서비스",

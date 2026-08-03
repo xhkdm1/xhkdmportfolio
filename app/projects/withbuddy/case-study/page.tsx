@@ -118,14 +118,14 @@ function Section({
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="scroll-mt-24 border-t border-zinc-200 py-24">
+    <section id={id} className="scroll-mt-24 border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
       <div className="mb-12 max-w-3xl">
         <p className="mb-3 text-sm font-medium text-zinc-500">{eyebrow}</p>
-        <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
+        <h2 className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
           {title}
         </h2>
         {description && (
-          <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg">
+          <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             {description}
           </p>
         )}
@@ -239,8 +239,8 @@ function DecisionCard({
 
 export default function WithBuddyCaseStudyPage() {
   return (
-    <main className="min-h-screen bg-white px-4 pb-24 pt-24 text-zinc-950 sm:px-6">
-      <div className="mx-auto max-w-5xl">
+    <main className="min-h-screen bg-white text-zinc-950">
+      <div className="mx-auto w-full max-w-5xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="mb-10 flex items-center gap-2 text-sm text-zinc-500">
           <Link href="/projects/withbuddy" className="hover:text-zinc-900">
             WithBuddy
@@ -249,16 +249,16 @@ export default function WithBuddyCaseStudyPage() {
           <span>Case Study</span>
         </div>
 
-        <section className="pb-24">
+        <section className="pb-20 sm:pb-28 lg:pb-32">
           <p className="mb-5 text-sm font-medium text-zinc-500">
             B2B SaaS · AI Agent · Product Design
           </p>
-          <h1 className="max-w-4xl text-5xl font-semibold leading-tight tracking-tight sm:text-6xl">
+          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
             반복되는 신입 질문을
             <br className="hidden sm:block" /> 담당자가 매번 답하지 않아도
             되도록.
           </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600">
+          <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
             문서 기반 AI가 반복 문의를 먼저 처리하고, 답하지 못한 질문은
             관리자의 문서 보강으로 이어지도록 운영 구조를 설계했다.
           </p>
@@ -322,8 +322,8 @@ export default function WithBuddyCaseStudyPage() {
           </div>
         </section>
 
-        <nav className="sticky top-16 z-20 -mx-4 overflow-x-auto border-y border-zinc-200 bg-white/90 px-4 backdrop-blur sm:-mx-6 sm:px-6">
-          <div className="mx-auto flex max-w-5xl gap-6 py-4">
+        <nav className="sticky top-16 z-20 -mx-5 overflow-x-auto border-y border-zinc-200 bg-white/90 px-5 backdrop-blur sm:-mx-8 sm:px-8 lg:-mx-12 lg:px-12">
+          <div className="mx-auto flex w-full gap-6 py-4">
             {navigation.map((item) => (
               <a
                 key={item.href}

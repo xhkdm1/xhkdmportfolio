@@ -26,14 +26,14 @@ const metrics = [
 
 export default function Hero() {
   return (
-    <section className="bg-[#F5FBFC] px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-36 lg:pt-44">
+    <section className="bg-[#F5FBFC] px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-5xl">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#008A95]">
             UX Research · Product Thinking
           </p>
 
-          <h1 className="mt-6 text-4xl font-semibold leading-[1.15] tracking-[-0.055em] text-zinc-950 sm:text-6xl lg:text-7xl">
+          <h1 className="mt-6 text-4xl font-semibold leading-[1.08] tracking-[-0.055em] text-zinc-950 sm:text-6xl lg:text-7xl">
             결제 직전까지 반복되는
             <br />
             장바구니 비교 경험을 탐색했습니다.

@@ -31,13 +31,13 @@ const researchScopes = [
 
 export default function DeskResearch() {
   return (
-    <section className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40">
+    <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
       <div className="mx-auto max-w-6xl">
         <div className="max-w-4xl">
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
             Desk Research
           </p>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             사용자는 이미 여러 선택지를 오가며
             <br />
             배달 메뉴를 결정하고 있었습니다.

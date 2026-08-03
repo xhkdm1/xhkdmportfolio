@@ -64,7 +64,7 @@ function SectionHeader({
       <p className="text-sm font-semibold tracking-[0.16em] text-zinc-500 uppercase">
         {eyebrow}
       </p>
-      <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-zinc-950 sm:text-4xl lg:text-5xl">
+      <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
         {title}
       </h2>
       {description ? (
@@ -180,7 +180,7 @@ export default function ArtieResearchSection() {
   return (
     <section
       id="research"
-      className="bg-white px-5 py-24 sm:px-8 sm:py-32 lg:px-12 lg:py-40"
+      className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28"
     >
       <div className="mx-auto max-w-6xl">
         <SectionHeader
