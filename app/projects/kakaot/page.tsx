@@ -1,6 +1,5 @@
 "use client";
 
-import BackToTop from "./BackToTop";
 import { motion } from "framer-motion";
 import {
   ArrowDown,
@@ -1213,5 +1212,4 @@ function Footer() {
       </div>
     </footer>
   );
-  <BackToTop />
 }

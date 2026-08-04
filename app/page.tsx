@@ -19,14 +19,14 @@ const featuredWorks = [
     thumbnail: "/images/baemin-thumbnail.png",
   },
   {
-  title: "카카오T 홈화면 개선",
-  description:
-    "택시 앱으로 학습된 사용자 인식과 통합 이동 플랫폼의 확장 방향 사이의 간극을 확인하고, 홈화면 정보구조의 대안을 탐색한 UX 프로젝트",
-  meta: "UX Research · Information Architecture · Product Thinking · 2026",
-  href: "/projects/kakaot",
-  liveUrl: null,
-  thumbnail: "/images/kakaot/kakaot-thumbnail.png",
-},
+    title: "카카오T 홈화면 개선",
+    description:
+      "택시 앱으로 학습된 사용자 인식과 통합 이동 플랫폼의 확장 방향 사이의 간극을 확인하고, 홈화면 정보구조의 대안을 탐색한 UX 프로젝트",
+    meta: "UX Research · Information Architecture · Product Thinking · 2026",
+    href: "/projects/kakaot",
+    liveUrl: null,
+    thumbnail: "",
+  },
   {
     title: "Artie",
     description: "전시 탐색 경험을 개인화한 AI 전시 추천 플랫폼",
@@ -38,6 +38,13 @@ const featuredWorks = [
 ];
 
 const otherWorks = [
+  {
+    title: "Seed Design System Clone & QA",
+    description:
+      "당근 Seed Design System을 재구성하고, 다른 디자이너가 실제 화면을 조립할 수 있는지 검증한 프로젝트",
+    meta: "Design System · Component QA · Figma · 2026",
+    href: "/projects/seed-design",
+  },
   {
     title: "PADO",
     description:
@@ -123,7 +130,7 @@ export default function Home() {
                         alt={`${work.title} Thumbnail`}
                         width={1920}
                         height={1080}
-                        draggable={false} //드래그 방지 
+                        draggable={false}
                         className="h-full w-full object-cover"
                       />
                     ) : (
@@ -153,7 +160,6 @@ export default function Home() {
                   >
                     Explore Project →
                   </a>
-                  
                 </div>
               </article>
             ))}
@@ -162,10 +168,10 @@ export default function Home() {
 
         <section>
           <div className="mb-6">
-            <p className="mb-2 text-sm text-zinc-500">Other Projects</p>
+            <p className="mb-2 text-sm text-zinc-500">Additional Works</p>
 
             <h2 className="text-2xl font-semibold tracking-tight">
-              실험과 학습이 담긴 프로젝트
+              다양한 방식으로 확장한 프로젝트
             </h2>
           </div>
 
