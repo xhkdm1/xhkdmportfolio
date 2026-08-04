@@ -7,7 +7,7 @@ const featuredWorks = [
     meta: "B2B SaaS · AI Agent · Product Design · 2026",
     href: "/projects/withbuddy",
     liveUrl: "https://landing-psi-ashen-98.vercel.app/",
-    thumbnail: "/images/withbuddy-thumbnail-v2.png",
+    thumbnail: "/images/withbuddy/withbuddy-thumbnail-v2.png",
   },
   {
     title: "배달의민족 장바구니 개선",

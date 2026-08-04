@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import BackToTop from "./BackToTop";
+import Image from "next/image";
 
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 const LANDING_URL =
@@ -306,9 +307,12 @@ export default function WithBuddyCaseStudyPage() {
             </div>
           </div>
 
-          <VisualPlaceholder
-            label="WithBuddy 대표 화면 또는 실제 서비스 화면 콜라주"
-            className="mt-8 min-h-[420px]"
+          <Image
+            src="/images/withbuddy/01-product-overview.png"
+            alt="WithBuddy 대표 화면"
+            width={1600}
+            height={900}
+            className="mt-8 w-full rounded-3xl border border-zinc-200"
           />
 
           <div className="mt-8 grid gap-4 md:grid-cols-3">
@@ -362,10 +366,31 @@ export default function WithBuddyCaseStudyPage() {
               </footer>
             </blockquote>
           </div>
-          <VisualPlaceholder
-            label="신입의 질문 장벽과 담당자의 반복 응대를 대비한 문제 다이어그램"
-            className="mt-6"
-          />
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            <Image
+              src="/images/withbuddy/02-매트릭스.png"
+              alt="Problem Diagram"
+              width={1000}
+              height={700}
+              className="w-full rounded-3xl border border-zinc-200"
+            />
+
+            <Image
+              src="/images/withbuddy/02-핵심감정3가지.png"
+              alt="Key Emotion"
+              width={1000}
+              height={700}
+              className="w-full rounded-3xl border border-zinc-200"
+            />
+
+            <Image
+              src="/images/withbuddy/02-problem-diagram.png"
+              alt="Priority Matrix"
+              width={1000}
+              height={700}
+              className="w-full rounded-3xl border border-zinc-200 md:col-span-2"
+            />
+          </div>
         </Section>
 
         <Section
@@ -428,9 +453,13 @@ export default function WithBuddyCaseStudyPage() {
             </p>
           </div>
 
-          <VisualPlaceholder
-            label="CJM 중 입사 이전부터 첫날까지의 Pain과 Opportunity 구간"
-            className="mt-6"
+          <Image
+            src="/images/withbuddy/03-cjm-opportunity.png"
+            alt="이미지 설명"
+            width={1920}
+            height={1080}
+            draggable={false}
+            className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
           />
         </Section>
 
@@ -484,9 +513,13 @@ export default function WithBuddyCaseStudyPage() {
             </div>
           </div>
 
-          <VisualPlaceholder
-            label="User-Buyer 관계 다이어그램과 Persona 미니 카드 2종"
-            className="mt-6"
+          <Image
+            src="/images/withbuddy/04-user-buyer-persona.png"
+            alt="이미지 설명"
+            width={1920}
+            height={1080}
+            draggable={false}
+            className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
           />
         </Section>
 
@@ -517,9 +550,13 @@ export default function WithBuddyCaseStudyPage() {
             </article>
           </div>
 
-          <VisualPlaceholder
-            label="Round 1 Hero와 Round 2 Hero의 실제 화면 Before / After"
-            className="mt-6"
+          <Image
+            src="/images/withbuddy/05-landing-before-after.png"
+            alt="이미지 설명"
+            width={1920}
+            height={1080}
+            draggable={false}
+            className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
           />
 
           <div className="mt-10 rounded-3xl border border-zinc-200 p-7">
@@ -574,9 +611,13 @@ export default function WithBuddyCaseStudyPage() {
               </article>
             ))}
           </div>
-          <VisualPlaceholder
-            label="같은 질문이 STEP 1과 STEP 4에서 다른 결과를 만드는 4단계 화면 흐름"
-            className="mt-6 min-h-[360px]"
+          <Image
+            src="/images/withbuddy/06-core-loop.png"
+            alt="이미지 설명"
+            width={1920}
+            height={1080}
+            draggable={false}
+            className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
           />
         </Section>
 
@@ -613,11 +654,15 @@ export default function WithBuddyCaseStudyPage() {
                     노출했다.
                   </p>
                 </div>
+                <Image
+                  src="/images/withbuddy/01-product-overview.png"
+                  alt="아래 이미지 자세히 보기"
+                  width={1920}
+                  height={1080}
+                  draggable={false}
+                  className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
+                />
               </div>
-              <VisualPlaceholder
-                label="Buddy Nudge · Q&A 답변 · no_result 화면 3종"
-                className="mt-7"
-              />
             </article>
 
             <article className="rounded-3xl bg-zinc-950 p-7 text-white">
@@ -650,12 +695,26 @@ export default function WithBuddyCaseStudyPage() {
                   </p>
                 </div>
               </div>
-              <VisualPlaceholder
-                label="Admin Console 대시보드 · 문서 교체 Before/After · IA"
-                className="mt-7 border-zinc-700 bg-zinc-900 text-zinc-300"
+              <Image
+                src="/images/withbuddy/08-admin-console.png"
+                alt="이미지 설명"
+                width={1920}
+                height={1080}
+                draggable={false}
+                className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
               />
             </article>
           </div>
+          <article className="mt-8 rounded-3xl border border-zinc-200 p-7">
+            <Image
+              src="/images/withbuddy/07-mybuddy-states.png"
+              alt="이미지 설명"
+              width={1920}
+              height={1080}
+              draggable={false}
+              className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
+            />
+          </article>
         </Section>
 
         <Section
@@ -685,10 +744,7 @@ export default function WithBuddyCaseStudyPage() {
               </article>
             ))}
           </div>
-          <VisualPlaceholder
-            label="WDS Foundation · Screen ID · Annotation Badge · 주요 Component"
-            className="mt-6 min-h-[360px]"
-          />
+
           <a
             href={WDS_URL}
             target="_blank"
