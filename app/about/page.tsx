@@ -81,7 +81,7 @@ const awards = [
   "KDT 딥다이브 Round 2 Best MVP",
 ];
 
-const certifications = ["서비스경험디자인기사", "TOEIC 765", "TOEFL AL"];
+const certifications = ["서비스경험디자인기사", "TOEIC 765", "TOEIC Speaking Advanced Low"];
 
 const skills = [
   "Figma",
