@@ -121,7 +121,7 @@ export default function WithBuddyPage() {
           >
             <div className="overflow-hidden rounded-[1.2rem] bg-white">
               <Image
-                src="/images/withbuddy-thumbnail-v2.png"
+                src="/images/withbuddy/withbuddy-thumbnail-v2.png"
                 alt="WithBuddy product preview"
                 width={1920}
                 height={1080}
