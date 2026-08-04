@@ -6,6 +6,7 @@ import QA from "./components/QA";
 import Findings from "./components/Findings";
 import Learning from "./components/Learning";
 import ProjectFooter from "./components/ProjectFooter";
+import TestResult from "./components/TestResult";
 
 export const metadata = {
   title: "Seed Design System Clone & QA | 박혜진 포트폴리오",
@@ -21,6 +22,7 @@ export default function SeedDesignPage() {
       <Process />
       <SystemBuild />
       <QA />
+      <TestResult />
       <Findings />
       <Learning />
       <ProjectFooter />

@@ -7,10 +7,12 @@ import Hero from "./components/Hero";
 import Interview from "./components/Interview";
 import Problem from "./components/Problem";
 import StickySectionNavigation from "./components/StickySectionNavigation";
+import ResearchSynthesis from "./components/ResearchSynthesis";
 
 const navigationItems = [
   { id: "problem", label: "Problem" },
   { id: "research", label: "Research" },
+  { id: "synthesis", label: "Research Synthesis" },
   { id: "concept", label: "Concept Test" },
 ];
 
@@ -30,6 +32,7 @@ export default function BaeminPage() {
         <DeskResearch />
         <CompetitiveAnalysis />
         <Interview />
+        <ResearchSynthesis /> 
       </section>
 
       <section id="concept" className="scroll-mt-24">
