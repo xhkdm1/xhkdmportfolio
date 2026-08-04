@@ -16,6 +16,19 @@ export default function Hero() {
         <br />
         Clone & QA
       </h1>
+
+      <div className="mt-8">
+        <a
+          href="https://www.figma.com/design/KeYc266vSKOLSVe7R5trLB/seed-design_cloning?node-id=5-9827&t=6Mvg1NONPsVG1r1Q-1"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-800 transition hover:border-zinc-300 hover:bg-zinc-50"
+        >
+          View Full Design File
+          <span>↗</span>
+        </a>
+      </div>
+      
       <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl">
         공개된 Seed Design System을 토큰부터 컴포넌트까지 재구성하고,
         다른 디자이너가 실제 화면을 조립할 수 있는지 Component Assembly

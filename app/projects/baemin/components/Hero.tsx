@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const projectInfo = [
   ["Project", "배달의민족 장바구니 비교 경험 개선"],
   ["Type", "UX Research · Concept Test"],
@@ -80,7 +82,14 @@ export default function Hero() {
           <p className="px-6 text-center text-sm font-medium leading-6 text-zinc-500">
             배민 장바구니 기존 화면과 개선 콘셉트 화면을 조합한
             <br />
-            Hero 이미지 삽입 영역
+            <Image
+              src="/images/baemin/01-project-overview.png"
+              alt="이미지 설명"
+              width={1920}
+              height={1080}
+              draggable={false}
+              className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 bg-zinc-50 object-contain"
+            />
           </p>
         </div>
       </div>
