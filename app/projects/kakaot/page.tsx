@@ -6,10 +6,13 @@ import {
   ArrowDown,
   ArrowRight,
   Check,
+  Maximize2,
   Minus,
   Plus,
   Quote,
+  X,
 } from "lucide-react";
+import { useEffect, useState } from "react";
 import type { ReactNode } from "react";
 
 const timeline = [
@@ -256,7 +259,35 @@ const outcomeCards = [
   },
 ];
 
+type LightboxImage = {
+  src: string;
+  alt: string;
+};
+
 export default function KakaoTCaseStudyPage() {
+  const [lightboxImage, setLightboxImage] = useState<LightboxImage | null>(null);
+
+  useEffect(() => {
+    if (!lightboxImage) {
+      return;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setLightboxImage(null);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [lightboxImage]);
+
   return (
     <main className="min-h-screen bg-[#F7F7F3] text-[#151515]">
       <Header />
@@ -277,7 +308,7 @@ export default function KakaoTCaseStudyPage() {
           </h1>
         </FadeIn>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="mt-14 grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <FadeIn delay={0.08}>
             <div>
               <p className="max-w-3xl text-lg leading-8 text-[#484842] sm:text-xl sm:leading-9">
@@ -297,6 +328,14 @@ export default function KakaoTCaseStudyPage() {
             <PortfolioImage
               src="/images/kakaot/hero.png"
               alt="카카오T 홈 화면 개선 프로젝트 대표 이미지"
+              containerClassName="relative min-h-[240px] w-full overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-[#F3F6FA] sm:min-h-[340px] lg:min-h-[440px]"
+              sizes="(max-width: 1024px) 100vw, 55vw"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/hero.png",
+                  alt: "카카오T 홈 화면 개선 프로젝트 대표 이미지",
+                })
+              }
               priority
             />
           </FadeIn>
@@ -594,6 +633,12 @@ export default function KakaoTCaseStudyPage() {
               description="카카오T는 택시 중심의 일렬 탭 구조에서 서비스별 아이콘, 상단 탭, 맥락별 탐색 구조로 변화했습니다. 그러나 화면의 기능은 늘어나는 동안 익숙한 택시 진입점의 가시성은 상대적으로 약해졌습니다."
               src="/images/kakaot/ux-history.png"
               alt="카카오T 홈 화면 UX 변천사"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/ux-history.png",
+                  alt: "카카오T 홈 화면 UX 변천사",
+                })
+              }
             />
 
             <ContextBlock
@@ -602,6 +647,12 @@ export default function KakaoTCaseStudyPage() {
               description="초기의 목표는 빠른 택시 호출이었고, 이후 모든 이동 수단을 연결하는 플랫폼으로 성장했습니다. 현재는 데이터와 AI를 활용한 맞춤형 이동 경험을 지향합니다."
               src="/images/kakaot/brand-value.png"
               alt="카카오T 브랜드 핵심 가치 변화"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/brand-value.png",
+                  alt: "카카오T 브랜드 핵심 가치 변화",
+                })
+              }
             />
 
             <ContextBlock
@@ -610,6 +661,12 @@ export default function KakaoTCaseStudyPage() {
               description="브랜드가 지향하는 통합 모빌리티와 실제 사용자가 체감하는 단일 목적형 택시 앱 사이의 차이가 확인됐습니다. 이 간극은 택시 접근성과 확장 서비스 발견성을 동시에 다뤄야 하는 설계 과제로 이어졌습니다."
               src="/images/kakaot/survey-insight.png"
               alt="카카오T 설문 결과 주요 인사이트"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/survey-insight.png",
+                  alt: "카카오T 설문 결과 주요 인사이트",
+                })
+              }
             />
           </div>
 
@@ -705,17 +762,24 @@ export default function KakaoTCaseStudyPage() {
           description="리서치 결과를 하나의 개선안으로 바로 수렴하지 않고, 각 방향이 해결하는 문제와 새롭게 만드는 비용을 함께 검토했습니다."
         />
 
-        <div className="grid gap-6 lg:grid-cols-3">
+        <div className="grid gap-6 lg:grid-cols-3 lg:items-stretch">
           {directions.map((direction, index) => (
             <FadeIn key={direction.title} delay={index * 0.06}>
-              <article className="h-full overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-white">
+              <article className="flex h-full flex-col overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-white">
                 <PortfolioImage
                   src={direction.image}
                   alt={`${direction.title} 화면`}
-                  className="rounded-none border-0"
+                  containerClassName="h-[420px] w-full border-0 bg-transparent sm:h-[520px] lg:h-[620px]"
+                  className="p-4 sm:p-6"
+                  onOpen={() =>
+                    setLightboxImage({
+                      src: direction.image,
+                      alt: `${direction.title} 화면`,
+                    })
+                  }
                 />
 
-                <div className="p-7">
+                <div className="flex flex-1 flex-col p-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#77776F]">
                     Direction {direction.number}
                   </p>
@@ -725,7 +789,7 @@ export default function KakaoTCaseStudyPage() {
                   <p className="mt-2 text-sm font-medium text-[#151515]">
                     {direction.purpose}
                   </p>
-                  <p className="mt-4 leading-7 text-[#66665F]">
+                  <p className="mt-4 flex-1 leading-7 text-[#66665F]">
                     {direction.description}
                   </p>
 
@@ -796,21 +860,28 @@ export default function KakaoTCaseStudyPage() {
           description="초기 아이디어를 한 번에 완성하지 않고, 택시 접근성, 서비스 발견성, 프로모션 위치와 크기를 반복해서 조정했습니다."
         />
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 md:items-stretch">
           {evolutionItems.map((item, index) => (
             <FadeIn key={item.src} delay={(index % 2) * 0.05}>
-              <figure className="h-full rounded-[32px] border border-[#E3E3DC] bg-white p-4 sm:p-5">
+              <figure className="flex h-full flex-col overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-white">
                 <PortfolioImage
                   src={item.src}
                   alt={`카카오T 개선안 변천사 ${index + 1}`}
-                  className="rounded-[24px]"
+                  containerClassName="h-[300px] w-full border-0 bg-transparent sm:h-[360px] lg:h-[420px]"
+                  className="p-4 sm:p-6"
+                  onOpen={() =>
+                    setLightboxImage({
+                      src: item.src,
+                      alt: `카카오T 개선안 변천사 ${index + 1}`,
+                    })
+                  }
                 />
-                <figcaption className="px-2 pb-2 pt-5">
+                <figcaption className="flex flex-1 flex-col px-6 pb-6 pt-5 sm:px-7 sm:pb-7">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#77776F]">
                     Step {String(index + 1).padStart(2, "0")}
                   </p>
                   <h3 className="mt-2 text-xl font-semibold">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-[#66665F]">
+                  <p className="mt-3 flex-1 text-sm leading-7 text-[#66665F]">
                     {item.caption}
                   </p>
                 </figcaption>
@@ -829,7 +900,7 @@ export default function KakaoTCaseStudyPage() {
             description="두 안 모두 핵심 서비스 탐색을 우선하지만, 광고의 위치와 크기를 서로 다른 방식으로 조정했습니다."
           />
 
-          <div className="grid gap-8 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
             <AlternativeCard
               label="Candidate A"
               title="광고 우측 이동안"
@@ -842,6 +913,12 @@ export default function KakaoTCaseStudyPage() {
               ]}
               src="/images/kakaot/wireframe-a.png"
               alt="카카오T 광고 우측 이동안"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/wireframe-a.png",
+                  alt: "카카오T 광고 우측 이동안",
+                })
+              }
             />
 
             <AlternativeCard
@@ -856,6 +933,12 @@ export default function KakaoTCaseStudyPage() {
               ]}
               src="/images/kakaot/wireframe-b.png"
               alt="카카오T 띠 배너 전환안"
+              onOpen={() =>
+                setLightboxImage({
+                  src: "/images/kakaot/wireframe-b.png",
+                  alt: "카카오T 띠 배너 전환안",
+                })
+              }
             />
           </div>
 
@@ -954,6 +1037,11 @@ export default function KakaoTCaseStudyPage() {
       </Section>
 
       <Footer />
+
+      <ImageLightbox
+        image={lightboxImage}
+        onClose={() => setLightboxImage(null)}
+      />
     </main>
   );
 }
@@ -1156,12 +1244,14 @@ function ContextBlock({
   description,
   src,
   alt,
+  onOpen,
 }: {
   eyebrow: string;
   title: string;
   description: string;
   src: string;
   alt: string;
+  onOpen?: () => void;
 }) {
   return (
     <FadeIn>
@@ -1176,7 +1266,13 @@ function ContextBlock({
           <p className="mt-5 leading-8 text-[#66665F]">{description}</p>
         </div>
 
-        <PortfolioImage src={src} alt={alt} />
+        <PortfolioImage
+          src={src}
+          alt={alt}
+          containerClassName="min-h-[280px] w-full sm:min-h-[360px] lg:min-h-[460px] max-h-[720px]"
+          className="p-4 sm:p-6"
+          onOpen={onOpen}
+        />
       </article>
     </FadeIn>
   );
@@ -1189,6 +1285,7 @@ function AlternativeCard({
   points,
   src,
   alt,
+  onOpen,
 }: {
   label: string;
   title: string;
@@ -1196,19 +1293,26 @@ function AlternativeCard({
   points: string[];
   src: string;
   alt: string;
+  onOpen?: () => void;
 }) {
   return (
     <FadeIn>
-      <article className="h-full overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-[#F7F7F3]">
-        <PortfolioImage src={src} alt={alt} className="rounded-none border-0" />
-        <div className="p-7 md:p-8">
+      <article className="flex h-full flex-col overflow-hidden rounded-[32px] border border-[#E3E3DC] bg-[#F7F7F3]">
+        <PortfolioImage
+          src={src}
+          alt={alt}
+          containerClassName="h-[360px] w-full border-0 bg-transparent sm:h-[440px] lg:h-[520px]"
+          className="p-4 sm:p-6"
+          onOpen={onOpen}
+        />
+        <div className="flex flex-1 flex-col p-7 md:p-8">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#77776F]">
             {label}
           </p>
           <h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em]">
             {title}
           </h3>
-          <p className="mt-5 leading-8 text-[#66665F]">{description}</p>
+          <p className="mt-5 flex-1 leading-8 text-[#66665F]">{description}</p>
           <ul className="mt-7 space-y-3 text-sm leading-7 text-[#55554F]">
             {points.map((point) => (
               <li key={point} className="flex gap-3">
@@ -1223,27 +1327,125 @@ function AlternativeCard({
   );
 }
 
-function PortfolioImage({
+function ContainedImage({
   src,
   alt,
   className = "",
+  containerClassName = "",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
   priority = false,
+  onOpen,
 }: {
   src: string;
   alt: string;
   className?: string;
+  containerClassName?: string;
+  sizes?: string;
   priority?: boolean;
+  onOpen?: () => void;
 }) {
   return (
-    <Image
+    <div
+      className={`relative flex items-center justify-center overflow-hidden rounded-[28px] border border-[#E3E3DC] bg-white ${containerClassName}`}
+    >
+      <button
+        type="button"
+        onClick={onOpen}
+        aria-label={`${alt} 확대해서 보기`}
+        className="group absolute inset-0 flex h-full w-full cursor-zoom-in items-center justify-center border-0 bg-transparent p-0 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#151515]/50"
+      >
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          priority={priority}
+          draggable={false}
+          sizes={sizes}
+          className={`object-contain ${className}`}
+        />
+
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-white/85 text-[#151515] shadow-sm backdrop-blur-sm transition group-hover:bg-white"
+        >
+          <Maximize2 className="h-4 w-4" />
+        </span>
+      </button>
+    </div>
+  );
+}
+
+function PortfolioImage({
+  src,
+  alt,
+  className = "",
+  containerClassName = "",
+  sizes,
+  priority = false,
+  onOpen,
+}: {
+  src: string;
+  alt: string;
+  className?: string;
+  containerClassName?: string;
+  sizes?: string;
+  priority?: boolean;
+  onOpen?: () => void;
+}) {
+  return (
+    <ContainedImage
       src={src}
       alt={alt}
-      width={2400}
-      height={1500}
+      className={className}
+      containerClassName={containerClassName}
+      sizes={sizes}
       priority={priority}
-      draggable={false}
-      className={`h-auto w-full rounded-[28px] border border-[#E3E3DC] bg-white object-contain ${className}`}
+      onOpen={onOpen}
     />
+  );
+}
+
+function ImageLightbox({
+  image,
+  onClose,
+}: {
+  image: LightboxImage | null;
+  onClose: () => void;
+}) {
+  if (!image) {
+    return null;
+  }
+
+  return (
+    <div
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 px-4 py-6 sm:px-6 lg:px-8"
+      role="dialog"
+      aria-modal="true"
+      aria-label="이미지 확대 보기"
+      onClick={onClose}
+    >
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="닫기"
+        className="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-[#151515] shadow-lg transition hover:bg-white"
+      >
+        <X className="h-5 w-5" />
+      </button>
+
+      <div
+        className="relative h-full w-full max-w-6xl"
+        onClick={(event) => event.stopPropagation()}
+      >
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          sizes="100vw"
+          className="object-contain"
+        />
+      </div>
+    </div>
   );
 }
 
