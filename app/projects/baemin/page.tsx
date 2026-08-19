@@ -1,19 +1,18 @@
-import Background from "./components/Background";
 import BackToTop from "./components/BackToTop";
-import CompetitiveAnalysis from "./components/CompetitiveAnalysis";
-import ConceptTest from "./components/ConceptTest";
-import DeskResearch from "./components/DeskResearch";
+import DecisionLimits from "./components/DecisionLimits";
+import Exploration from "./components/Exploration";
 import Hero from "./components/Hero";
-import Interview from "./components/Interview";
 import Problem from "./components/Problem";
+import Research from "./components/Research";
 import StickySectionNavigation from "./components/StickySectionNavigation";
-import ResearchSynthesis from "./components/ResearchSynthesis";
+import Validation from "./components/Validation";
 
 const navigationItems = [
   { id: "problem", label: "Problem" },
   { id: "research", label: "Research" },
-  { id: "synthesis", label: "Research Synthesis" },
-  { id: "concept", label: "Concept Test" },
+  { id: "exploration", label: "Exploration" },
+  { id: "validation", label: "Validation" },
+  { id: "decision-limits", label: "Decision & Limits" },
 ];
 
 export default function BaeminPage() {
@@ -24,19 +23,23 @@ export default function BaeminPage() {
       <StickySectionNavigation items={navigationItems} />
 
       <section id="problem" className="scroll-mt-24">
-        <Background />
         <Problem />
       </section>
 
       <section id="research" className="scroll-mt-24">
-        <DeskResearch />
-        <CompetitiveAnalysis />
-        <Interview />
-        <ResearchSynthesis /> 
+        <Research />
       </section>
 
-      <section id="concept" className="scroll-mt-24">
-        <ConceptTest />
+      <section id="exploration" className="scroll-mt-24">
+        <Exploration />
+      </section>
+
+      <section id="validation" className="scroll-mt-24">
+        <Validation />
+      </section>
+
+      <section id="decision-limits" className="scroll-mt-24">
+        <DecisionLimits />
       </section>
 
       <BackToTop />

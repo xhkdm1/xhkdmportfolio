@@ -221,7 +221,7 @@ function DecisionCard({ decision }: { decision: (typeof decisions)[number] }) {
 export default function WithBuddyCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-950">
-      <div className="mx-auto w-full max-w-5xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
+      <div className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="mb-10 flex items-center gap-2 text-sm text-zinc-500">
           <Link href="/projects/withbuddy" className="hover:text-zinc-900">
             WithBuddy
