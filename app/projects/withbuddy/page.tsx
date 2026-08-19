@@ -63,12 +63,6 @@ const resources = [
     href: "/projects/withbuddy/qa-guide",
     label: "Quality Assurance",
   },
-  {
-    title: "Information Architecture",
-    description: "관리자와 신입사원 관점에서 설계한 정보 구조",
-    href: "/projects/withbuddy/ia",
-    label: "Structure",
-  },
 ];
 
 export default function WithBuddyPage() {

@@ -51,19 +51,7 @@ const otherWorks = [
       "팬의 창작과 참여를 중심으로 새로운 팬덤 경험을 제안한 플랫폼",
     meta: "Fan Platform · Product Concept · UX/UI Design · 2025",
     href: "/projects/pado",
-  },
-  {
-    title: "Tutti",
-    description: "자격증 준비 과정을 함께 지속하게 만드는 커뮤니티 서비스",
-    meta: "Community · UX/UI · 2024",
-    href: "/projects/tutti",
-  },
-  {
-    title: "I Got This",
-    description: "가짜 정보를 판별하고 신뢰도를 확인하는 정보 검증 서비스",
-    meta: "Fact Check · AI Concept · 2024",
-    href: "/projects/i-got-this",
-  },
+  }
 ];
 
 export default function Home() {
