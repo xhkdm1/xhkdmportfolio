@@ -196,30 +196,6 @@ function Section({
   );
 }
 
-function VisualPlaceholder({
-  label,
-  className = "",
-}: {
-  label: string;
-  className?: string;
-}) {
-  return (
-    <div
-      className={`flex min-h-72 items-center justify-center rounded-3xl border border-dashed border-zinc-300 bg-zinc-50 px-6 text-center ${className}`}
-    >
-      <div>
-        <p className="text-sm font-medium text-zinc-700">
-          시각자료 삽입 예정
-        </p>
-
-        <p className="mt-2 max-w-md text-sm leading-6 text-zinc-500">
-          {label}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function QAValidationPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-950">
@@ -249,9 +225,9 @@ export default function QAValidationPage() {
           </h1>
 
           <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
-            기능이 작동하는지만 확인하지 않았습니다. 신입과 운영자가
-            실제 업무 상황에서 답변을 신뢰하고, 필요한 작업을 완료할 수
-            있는지를 데이터와 사용자 피드백으로 검증했습니다.
+            제한된 오픈테스트에서 신입과 운영자 역할로 주요 과업을
+            수행하게 하고, 답변의 완결성과 관리자 작업 과정에서 생긴
+            마찰을 로그와 사용자 피드백으로 확인했습니다.
           </p>
 
           <div className="mt-12 grid gap-4 md:grid-cols-3">
@@ -277,10 +253,6 @@ export default function QAValidationPage() {
             </article>
           </div>
 
-          <VisualPlaceholder
-            label="사용자 테스트 진행 모습 또는 테스트 수행지와 GA4 화면 콜라주"
-            className="mt-8 min-h-[420px]"
-          />
         </section>
 
         {/* Sticky navigation */}
@@ -610,12 +582,6 @@ export default function QAValidationPage() {
             </div>
           </div>
 
-          {/* 시각자료 자리 */}
-          <VisualPlaceholder
-            label="GA4 질문 이벤트 및 no_result 비율 · 설문 평가 점수 · 주요 우려 항목 차트"
-            className="mt-8 min-h-[360px]"
-          />
-
           <p className="mt-5 text-sm leading-6 text-zinc-500">
             테스트 기간: 2026.07.04–07.09 · 응답자 13명 · 관리자 화면 사용
             응답자 10명
@@ -741,10 +707,6 @@ export default function QAValidationPage() {
             ))}
           </div>
 
-          <VisualPlaceholder
-            label="답변 오류 · 민감정보 응답 · 계정 목록 갱신의 Before / After 화면"
-            className="mt-6"
-          />
         </Section>
 
         {/* Limitations */}
@@ -782,8 +744,8 @@ export default function QAValidationPage() {
               </h3>
 
               <p className="mt-4 text-sm leading-6 text-zinc-600">
-                30~100인 외 조직에서도 같은 운영 문제가 발생하는지
-                추가 검증이 필요합니다.
+                50인 이하 중소기업·스타트업에서도 충분한 사용 빈도와
+                구매 가치가 있는지 추가 검증이 필요합니다.
               </p>
             </article>
           </div>
