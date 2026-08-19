@@ -40,6 +40,13 @@ body * {
   -moz-user-select: none;
 }
 
+.allow-text-selection,
+.allow-text-selection * {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+}
+
 /* Prevent image dragging */
 img {
   user-select: none;

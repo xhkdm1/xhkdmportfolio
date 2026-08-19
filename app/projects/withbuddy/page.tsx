@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import TrialAccountGuide from "./TrialAccountGuide";
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
 
 const LANDING_URL =
@@ -9,13 +10,12 @@ const contributions = [
   {
     number: "01",
     category: "Product Discovery",
-    title: "문제를 발견하고 타깃을 구체화했습니다.",
+    title: "직접 확인한 문제를 B2B 관점으로 구조화했습니다.",
     items: [
-      "신입사원 대상 필드 인터뷰 진행 및 온보딩 Pain Point 도출",
-      "설문·인터뷰 결과 분석을 통한 문제 정의 과정 참여",
-      "User와 Buyer가 다른 B2B SaaS 구조 발견 및 포지셔닝 논의",
-      "신입·담당자 Persona 제작",
-      "Customer Journey Map 제작 및 기회 영역 도출",
+      "신입 필드 인터뷰 직접 설계·진행",
+      "추가 인터뷰·설문 분석 참여",
+      "User / Buyer 문제 구조화",
+      "50인 이하 중소기업·스타트업 타깃 논의 참여",
     ],
   },
   {
@@ -23,11 +23,9 @@ const contributions = [
     category: "Product Design",
     title: "발견한 문제를 제품 경험으로 연결했습니다.",
     items: [
-      "Landing IA 및 UX Writing 설계",
-      "구매자 중심 메시지 전략과 Hero 카피 재설계",
-      "Core Loop 시나리오 설계 및 시각화",
-      "Admin Console 정보 구조와 운영 UX 설계",
-      "신입용 MyBuddy 채팅 경험 설계",
+      "MyBuddy · Admin Console UX 설계",
+      "미답변과 문서 보강을 연결한 운영 흐름 설계",
+      "계정·문서·상태·Validation·예외 화면 설계",
     ],
   },
   {
@@ -38,8 +36,7 @@ const contributions = [
       "WDS(WithBuddy Design System) 구축",
       "디자인 토큰 및 컴포넌트 규칙 정의",
       "Screen ID 및 Annotation 시스템 구축",
-      "Figma와 코드의 네이밍 기준 정리",
-      "개발 핸드오프 프로세스 정립",
+      "Handoff와 QA 기준 정리",
     ],
   },
 ];
@@ -82,8 +79,8 @@ export default function WithBuddyPage() {
 
             <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
               반복되는 온보딩 문의를 문서 기반 AI가 먼저 처리하고,
-              담당자가 핵심 업무에 집중할 수 있도록 설계한 AI 온보딩
-              에이전트입니다.
+              미답변은 담당자의 문서 보강으로 연결한 B2B 온보딩
+              서비스입니다.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -115,7 +112,7 @@ export default function WithBuddyPage() {
           >
             <div className="overflow-hidden rounded-[1.2rem] bg-white">
               <Image
-                src="/images/withbuddy-thumbnail-v2.png"
+                src="/images/withbuddy/withbuddy-thumbnail-v2.png"
                 alt="WithBuddy product preview"
                 width={1920}
                 height={1080}
@@ -140,6 +137,8 @@ export default function WithBuddyPage() {
             </div>
           </a>
         </section>
+
+        <TrialAccountGuide />
 
         {/* Documentation */}
         <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
@@ -194,8 +193,9 @@ export default function WithBuddyPage() {
             </h2>
 
             <p className="mt-5 text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
-              리서치에서 발견한 문제를 제품 구조와 화면으로 구체화하고,
-              디자인 시스템과 핸드오프 기준까지 연결했습니다.
+              Product Designer 1인으로 필드 인터뷰를 직접 설계·진행하고,
+              팀 리서치 분석에 참여했습니다. 이후 제품 구조와 화면,
+              디자인 시스템, QA와 핸드오프 기준을 설계했습니다.
             </p>
           </div>
 
