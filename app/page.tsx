@@ -10,15 +10,6 @@ const featuredWorks = [
     thumbnail: "/images/withbuddy/withbuddy-thumbnail-v2.png",
   },
   {
-    title: "배달의민족 장바구니 개선",
-    description:
-      "여러 가게를 비교하는 사용자의 탐색 행동을 검증하고 장바구니 비교 경험을 탐색한 UX 리서치 프로젝트",
-    meta: "UX Research · Concept Test · Product Thinking · 2026",
-    href: "/projects/baemin",
-    liveUrl: null,
-    thumbnail: "/images/baemin-thumbnail.png",
-  },
-  {
     title: "카카오T 홈화면 개선",
     description:
       "택시 앱으로 학습된 사용자 인식과 통합 이동 플랫폼의 확장 방향 사이의 간극을 확인하고, 홈화면 정보구조의 대안을 탐색한 UX 프로젝트",
@@ -26,6 +17,15 @@ const featuredWorks = [
     href: "/projects/kakaot",
     liveUrl: null,
     thumbnail: "",
+  },
+  {
+    title: "배달의민족 장바구니 개선",
+    description:
+      "여러 가게를 비교하는 사용자의 탐색 행동을 검증하고 장바구니 비교 경험을 탐색한 UX 리서치 프로젝트",
+    meta: "UX Research · Concept Test · Product Thinking · 2026",
+    href: "/projects/baemin",
+    liveUrl: null,
+    thumbnail: "/images/baemin-thumbnail.png",
   },
   {
     title: "Artie",
