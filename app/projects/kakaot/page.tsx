@@ -12,7 +12,7 @@ const projectInfo = [
   { label: "Contribution", value: "공동 리서치 · 설계 · 의사결정" },
   { label: "Research", value: "Play Store 리뷰 100건 · 사용자 조사 15명" },
   { label: "Tools", value: "Figma" },
-  { label: "Outcome", value: "3개 방향 비교 후 2·3안의 요소를 조합해 홈 시안을 구체화" },
+  { label: "Outcome", value: "3개 방향 비교 → 2·3안 결합" },
 ];
 
 const directions = [
@@ -67,9 +67,16 @@ export default function KakaoTCaseStudyPage() {
         </FadeIn>
 
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
-          <FadeIn><article className="rounded-[32px] bg-[#FEE500] p-7 md:p-10"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/50">Research Finding</p><p className="mt-8 text-4xl font-semibold tracking-[-0.05em]">9명 중 7명</p><p className="mt-4 text-lg leading-8">브랜드 인식 문항에서 ‘택시’를 선택했습니다.</p><p className="mt-2 text-sm text-black/55">‘이동’을 선택한 응답은 2명이었습니다.</p></article></FadeIn>
+          <FadeIn><article className="rounded-[32px] bg-[#FEE500] p-7 md:p-10"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-black/50">Research Finding</p><p className="mt-8 text-4xl font-semibold tracking-[-0.05em]">7 / 9</p><p className="mt-4 text-lg leading-8">브랜드 인식 문항에서 9명 중 7명이 ‘택시’를 선택했습니다.</p><p className="mt-2 text-sm text-black/55">‘이동’을 선택한 응답은 2명이었습니다.</p></article></FadeIn>
           <FadeIn delay={0.06}><article className="rounded-[32px] bg-[#151515] p-7 text-white md:p-10"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">Design Challenge</p><p className="mt-8 text-2xl font-semibold leading-9 tracking-[-0.03em]">익숙한 택시 진입점을 유지하면서 다양한 이동 서비스를 홈에 함께 노출하는 구조를 탐색했습니다.</p></article></FadeIn>
         </div>
+
+        <FadeIn>
+          <div className="mt-6 rounded-[28px] border border-[#E3E3DC] bg-white px-7 py-6 md:flex md:items-center md:gap-10 md:px-10 md:py-8">
+            <p className="shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-[#77776F]">Project Outcome</p>
+            <p className="mt-4 text-lg font-semibold leading-8 tracking-[-0.02em] md:mt-0">3개 방향을 비교한 뒤 2안과 3안의 요소를 조합해 하나의 홈 시안을 구체화했습니다.</p>
+          </div>
+        </FadeIn>
 
         <FadeIn><div className="mt-16"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#77776F]">As-is</p><h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em]">기존 홈 구조를 먼저 확인했습니다.</h2><PortfolioImage src="/images/kakaot/ux-history.png" alt="카카오T 홈 화면 구조의 변화와 기존 홈" containerClassName="mt-8 aspect-[16/9] w-full" sizes="(max-width: 1200px) 100vw, 1100px" onOpen={() => openImage("/images/kakaot/ux-history.png", "카카오T 홈 화면 구조의 변화와 기존 홈")} priority /><ul className="mt-6 grid gap-3 text-sm leading-7 text-[#66665F] sm:grid-cols-2 lg:grid-cols-4">{["상황별 탭으로 서비스 구분", "택시 외 여러 이동 서비스 노출", "서비스와 프로모션이 한 화면에 배치", "택시 진입점 위치"].map((item) => <li key={item} className="rounded-2xl border border-[#E3E3DC] bg-white px-5 py-4">{item}</li>)}</ul></div></FadeIn>
       </section>
