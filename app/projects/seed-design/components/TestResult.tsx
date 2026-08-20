@@ -57,7 +57,7 @@ export default function TestResult() {
     >
       <header className="mb-12 border-t border-zinc-200 pt-5">
         <p className="text-sm font-medium text-[#E85D00]">
-          07 · Test Result
+          06 · Test Result
         </p>
 
         <h2 className="mt-4 max-w-4xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">

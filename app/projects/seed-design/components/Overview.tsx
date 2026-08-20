@@ -18,9 +18,9 @@ export default function Overview() {
               My Contribution
             </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight">
-              타깃을 복제에서 검증으로 넘겨,
+              재구성에서 끝내지 않고,
               <br />
-              실제 조립 가능성을 확인했습니다.
+              실제 조립 가능성까지 확인했습니다.
             </h2>
           </div>
           <ul className="border-t border-zinc-200">

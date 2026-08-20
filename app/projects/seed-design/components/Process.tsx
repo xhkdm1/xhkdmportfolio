@@ -17,7 +17,7 @@ export default function Process() {
         index="01"
         eyebrow="Process"
         title="문서를 이해하는 순서부터, 실제 구조로 다시 연결했습니다."
-        description="Foundation → Component → Variant → QA 흐름으로 재구성하며, 명명과 조립 가능성을 같이 검토했습니다."
+        description="가이드라인 이해 → Foundation → Component → Assembly Test 순으로 재구성하며, 명명과 조립 가능성을 함께 검토했습니다."
       />
       <div className="grid border-y border-zinc-200 md:grid-cols-4 md:divide-x md:divide-zinc-200">
         {steps.map(([number, title, body], index) => (

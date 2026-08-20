@@ -565,51 +565,31 @@ export default function PadoPage() {
 
         <Section
           id="insight"
-          eyebrow="03 · Product Experience"
-          title="PADO의 핵심 경험은 3가지입니다. 콘텐츠를 본 뒤, 창작하고, 참여하고, 보상을 되돌려주는 흐름입니다."
-          description="이 서비스는 단일 기능이 아니라 팬의 참여 순환을 연결하는 구조로 설계됐습니다. LIVE / Clip Studio, From.★, Reward가 각각 한 단계의 참여 흐름을 담당합니다."
+          eyebrow="03 · Fan Loop"
+          title="PADO의 핵심 경험은 콘텐츠 소비 이후의 창작·대화·보상을 하나의 흐름으로 연결하는 것입니다."
+          description="콘텐츠를 본 뒤 창작하고 대화에 참여한 경험이 보상과 다음 참여로 이어지도록 구성했습니다."
         >
-          <div className="grid gap-5 md:grid-cols-3">
-            <article className="rounded-3xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-medium text-zinc-500">01 · LIVE / Clip Studio</p>
-              <h3 className="mt-4 text-xl font-semibold leading-snug">
-                라이브를 바로 2차 창작으로 연결합니다.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">
-                팬이 보는 순간을 선택하고 클립으로 만들고 공유까지 이어지는
-                경험을 중심에 두었습니다.
-              </p>
-            </article>
-
-            <article className="rounded-3xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-medium text-zinc-500">02 · From.★</p>
-              <h3 className="mt-4 text-xl font-semibold leading-snug">
-                선택과 비교를 통해 대화가 시작되도록 합니다.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">
-                아티스트의 선택을 예측하고 결과를 비교하며 팬의 의견이
-                커뮤니티 안에서 자연스럽게 확장되게 했습니다.
-              </p>
-            </article>
-
-            <article className="rounded-3xl border border-zinc-200 bg-white p-6">
-              <p className="text-sm font-medium text-zinc-500">03 · Reward</p>
-              <h3 className="mt-4 text-xl font-semibold leading-snug">
-                참여를 보상으로 연결해 다음 행동을 유도합니다.
-              </h3>
-              <p className="mt-4 text-sm leading-7 text-zinc-600">
-                콘텐츠 제작, 대화 참여, 출석 활동이 보상으로 연결되어 다음
-                참여로 자연스럽게 이어지도록 구조를 잡았습니다.
-              </p>
-            </article>
+          <div className="flex flex-wrap items-center gap-2 border-y border-zinc-200 py-5">
+            {["Watch", "Create", "Discuss", "Reward", "Return"].map(
+              (step, index, array) => (
+                <div key={step} className="flex items-center gap-2">
+                  <span className="rounded-full bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-700">
+                    {step}
+                  </span>
+                  {index < array.length - 1 && (
+                    <span className="text-zinc-300">→</span>
+                  )}
+                </div>
+              ),
+            )}
           </div>
         </Section>
 
         <Section
           id="solution"
-          eyebrow="04 · Product Concept"
-          title="PADO는 콘텐츠 소비에서 창작과 참여로 이어지는 Fan Loop를 제안합니다."
-          description="기능을 나열하기보다, 팬이 라이브를 본 뒤 클립을 만들고, 대화에 참여하고, 보상을 통해 다시 참여하도록 연결하는 흐름을 설계했습니다."
+          eyebrow="04 · Product Experience"
+          title="세 가지 핵심 경험을 실제 UI와 흐름으로 구체화했습니다."
+          description="Clip Studio, From.★, Reward의 문제와 설계 판단을 화면과 함께 정리했습니다."
         >
           <div className="mb-16 overflow-hidden rounded-3xl border border-zinc-200 bg-[#f7f3ff]">
             <Image
