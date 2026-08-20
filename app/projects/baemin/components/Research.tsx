@@ -356,12 +356,17 @@ export default function Research() {
                   Result
                 </p>
                 <p className="mt-3 text-sm font-semibold leading-6 text-zinc-900">
-                  해당 문항 응답자의 약 95.5%가 여러 가게의 장바구니를
-                  유지하는 흐름을 선택했습니다.
+                  해당 문항 응답자 22명 중 21명(95.5%)이 여러 가게의
+                  장바구니를 유지하는 흐름을 선택했습니다.
                 </p>
                 <p className="mt-2 text-sm leading-6 text-zinc-500">
-                  비교 상태를 유지하는 흐름을 구체화하는 참고 근거로
-                  사용했습니다.
+                  반면 1명은 선택지가 많아질 경우 오히려 결정 부담이 커질 수
+                  있다고 응답했습니다.
+                </p>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                  비교 상태를 유지하는 방향은 이어가되, 정보량과 선택 부담을
+                  줄이는 구조가 필요하다고 보고 두 가지 장바구니 구조를
+                  비교했습니다.
                 </p>
               </div>
             </div>
