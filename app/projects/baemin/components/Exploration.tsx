@@ -45,7 +45,7 @@ export default function Exploration() {
             <br />
             세 가지 방향으로 정리했습니다.
           </h2>
-          <p className="mt-6 max-w-3xl text-sm leading-6 text-zinc-500">세 방향은 기존 프로젝트에서 실제로 검토한 해결 위치입니다.</p>
+          <p className="mt-6 max-w-3xl text-sm leading-6 text-zinc-500">비교 상태를 둘 위치를 장바구니·찜·별도 비교 세 방향으로 검토했습니다.</p>
         </header>
 
         <p className="mt-14 text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">

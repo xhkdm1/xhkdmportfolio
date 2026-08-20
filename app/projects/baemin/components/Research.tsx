@@ -91,7 +91,7 @@ export default function Research() {
           <p className="mt-6 max-w-3xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             기존 장바구니에서 이전 선택을 유지하기 어려운 상황만으로 사용자
             문제를 단정하지 않았습니다. 앱 리뷰와 유사 서비스, 인터뷰와
-            설문을 차례로 살펴보며 실제 주문 전 비교 행동을 확인했습니다.
+            설문을 통해 실제 주문 전 비교 행동을 살폈습니다.
           </p>
         </header>
 
@@ -340,6 +340,31 @@ export default function Research() {
                 추가로 살폈습니다.
               </p>
             </div>
+            <div className="grid gap-6 border-t border-zinc-200 pt-6 md:col-span-2 lg:grid-cols-2">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                  Question
+                </p>
+                <p className="mt-3 text-sm leading-6 text-zinc-700">
+                  두 개 이상의 가게 메뉴를 비교할 때, 기존 장바구니를 비우는
+                  흐름과 여러 가게의 장바구니를 유지하는 흐름 중 어느 쪽을
+                  선호하는지 물었습니다.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                  Result
+                </p>
+                <p className="mt-3 text-sm font-semibold leading-6 text-zinc-900">
+                  해당 문항 응답자의 약 95.5%가 여러 가게의 장바구니를
+                  유지하는 흐름을 선택했습니다.
+                </p>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                  비교 상태를 유지하는 흐름을 구체화하는 참고 근거로
+                  사용했습니다.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -376,10 +401,6 @@ export default function Research() {
               </p>
             </div>
           </div>
-          <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-500">
-            Figma 원본의 인터뷰 전·후 분석에서 강조 대상이 달라진 내용을
-            반영했습니다.
-          </p>
         </div>
 
         <div className="mt-20">
