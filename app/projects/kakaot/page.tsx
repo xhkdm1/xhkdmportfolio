@@ -23,8 +23,8 @@ const directions = [
 
 const refinements = [
   { step: "01", title: "2안 + 3안 결합", body: "2안의 3D 아이콘과 3안의 연한 배경을 결합했습니다.", src: "/images/kakaot/evolution-06.png", alt: "2안의 3D 아이콘과 3안의 연한 배경을 결합한 과정" },
-  { step: "02", title: "프로모션 위치 변경", body: "프로모션을 오른쪽으로 옮겨 서비스 영역과 공간을 분리했습니다.", src: "/images/kakaot/wireframe-a.png", alt: "프로모션을 오른쪽으로 옮긴 홈 화면 시안" },
-  { step: "03", title: "띠 배너로 전환", body: "기존 카카오T의 띠 배너 표현을 참고해 프로모션 형태를 다시 구성했습니다.", src: "/images/kakaot/wireframe-b.png", alt: "프로모션을 띠 배너 형태로 구성한 홈 화면 시안" },
+  { step: "02", title: "프로모션 위치 변경", body: "프로모션을 오른쪽으로 옮겨 서비스 영역과 공간을 분리했습니다.", src: "/images/kakaot/wireframe-a.webp", alt: "프로모션을 오른쪽으로 옮긴 홈 화면 시안" },
+  { step: "03", title: "띠 배너로 전환", body: "기존 카카오T의 띠 배너 표현을 참고해 프로모션 형태를 다시 구성했습니다.", src: "/images/kakaot/wireframe-b.webp", alt: "프로모션을 띠 배너 형태로 구성한 홈 화면 시안" },
 ];
 
 const decisionGroups = [

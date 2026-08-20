@@ -112,22 +112,22 @@ const copyrightPolicies = [
   {
     title: "편집 허용 구간 제한",
     description:
-      "전체 영상의 무단 재배포가 아니라 짧은 하이라이트 제작을 중심으로 편집 범위를 제한합니다.",
+      "실제 서비스화 시 편집 가능한 구간과 길이의 제한 기준을 검토해야 합니다.",
   },
   {
     title: "자동 워터마크",
     description:
-      "편집 콘텐츠에 서비스명과 원본 출처가 유지되도록 자동 워터마크를 적용합니다.",
+      "서비스명과 원본 출처를 유지할 워터마크 적용 여부를 검토해야 합니다.",
   },
   {
     title: "원본 콘텐츠 연결",
     description:
-      "편집본에서 원본 라이브와 아티스트 페이지로 이동할 수 있도록 출처 링크를 함께 제공합니다.",
+      "편집본에서 원본 라이브와 아티스트 페이지를 연결하는 방식을 검토해야 합니다.",
   },
   {
     title: "권리자별 사용 정책",
     description:
-      "아티스트와 소속사의 계약 및 운영 정책에 따라 편집 가능 여부와 공유 범위를 개별 설정합니다.",
+      "권리자별로 편집 가능 여부와 공유 범위를 설정할 기준을 검토해야 합니다.",
   },
 ];
 
@@ -147,9 +147,9 @@ function Section({
   return (
     <section
       id={id}
-      className="scroll-mt-28 border-t border-zinc-200 py-16 sm:py-20 lg:py-24"
+      className="scroll-mt-28 border-t border-zinc-200 py-14 sm:py-16 lg:py-20"
     >
-      <div className="mb-12 max-w-3xl">
+      <div className="mb-10 max-w-3xl">
         <p className="mb-3 text-sm font-medium text-zinc-500">{eyebrow}</p>
 
         <h2 className="text-3xl font-semibold leading-tight tracking-[-0.045em] sm:text-4xl lg:text-5xl">
@@ -632,22 +632,28 @@ export default function PadoPage() {
           title="창작의 편의성은 높일 수 있지만, 원본 보호와 권리자 기준은 제품 정책에서 함께 정리해야 합니다."
           description="짧은 편집 기능은 기획적으로는 매력적이지만, 실제 서비스에는 저작권, 편집 범위, 공유 범위와 권리자별 정책이 함께 설계되어야 합니다."
         >
-          <div className="grid gap-5 md:grid-cols-2">
-            {copyrightPolicies.map((policy) => (
-              <article
-                key={policy.title}
-                className="rounded-3xl border border-zinc-200 p-6"
-              >
-                <h3 className="text-lg font-semibold">{policy.title}</h3>
-
-                <p className="mt-4 text-sm leading-7 text-zinc-600">
-                  {policy.description}
-                </p>
-              </article>
-            ))}
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 sm:p-7">
+            <p className="text-sm font-medium text-zinc-500">
+              실제 서비스화 시 추가 검토가 필요한 조건
+            </p>
+            <ul className="mt-4 divide-y divide-zinc-200">
+              {copyrightPolicies.map((policy) => (
+                <li
+                  key={policy.title}
+                  className="grid gap-2 py-4 first:pt-0 last:pb-0 sm:grid-cols-[11rem_1fr] sm:gap-6"
+                >
+                  <h3 className="text-sm font-medium text-zinc-900">
+                    {policy.title}
+                  </h3>
+                  <p className="text-sm leading-6 text-zinc-600">
+                    {policy.description}
+                  </p>
+                </li>
+              ))}
+            </ul>
           </div>
 
-          <div className="mt-8 rounded-2xl bg-zinc-900 p-6 text-white sm:p-7">
+          <div className="mt-6 rounded-2xl bg-zinc-900 p-6 text-white sm:p-7">
             <p className="text-sm font-medium text-zinc-400">
               Remaining Limit
             </p>
@@ -669,8 +675,8 @@ export default function PadoPage() {
           eyebrow="06 · Reflection"
           title="화면을 고치는 것보다, 사용자가 이미 하고 있는 행동을 먼저 정의하는 것이 더 중요하다는 점을 배웠습니다."
         >
-          <div className="grid gap-6 lg:grid-cols-2">
-            <article className="rounded-3xl border border-zinc-200 p-7">
+          <div className="grid border-y border-zinc-200 lg:grid-cols-2 lg:divide-x lg:divide-zinc-200">
+            <article className="border-b border-zinc-200 py-6 lg:border-b-0 lg:pr-8">
               <p className="text-sm font-medium text-zinc-500">
                 What Changed
               </p>
@@ -682,7 +688,7 @@ export default function PadoPage() {
               </p>
             </article>
 
-            <article className="rounded-3xl border border-zinc-200 p-7">
+            <article className="py-6 lg:pl-8">
               <p className="text-sm font-medium text-zinc-500">
                 What Stayed
               </p>
@@ -695,15 +701,9 @@ export default function PadoPage() {
             </article>
           </div>
 
-          <div className="mt-8 rounded-2xl bg-zinc-900 p-6 text-white sm:p-7">
-            <p className="max-w-3xl text-xl font-semibold leading-8 sm:text-2xl">
-              좋은 서비스는 화면을 새롭게 만드는 것이 아니라, 사용자가 이미
-              행동하고 있는 흐름을 더 자연스럽게 연결할 때 만들어집니다.
-            </p>
-          </div>
         </Section>
 
-        <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
+        <section className="border-t border-zinc-200 py-14 sm:py-16 lg:py-20">
           <p className="text-sm font-medium text-zinc-500">
             Research Basis
           </p>

@@ -350,7 +350,7 @@ export default function WithBuddyCaseStudyPage() {
           </ol>
           <div className="mt-8">
             <ImageLightbox
-              src="/images/withbuddy/06-core-loop.png"
+              src="/images/withbuddy/06-core-loop.webp"
               alt="미답변을 관리자 확인과 문서 보강으로 연결한 운영 흐름"
               label="Core Loop"
               caption="AI 미응답을 Admin의 문서 보강으로 연결"

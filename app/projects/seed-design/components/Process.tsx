@@ -19,15 +19,17 @@ export default function Process() {
         title="문서를 이해하는 순서부터, 실제 구조로 다시 연결했습니다."
         description="Foundation → Component → Variant → QA 흐름으로 재구성하며, 명명과 조립 가능성을 같이 검토했습니다."
       />
-      <div className="grid gap-5 md:grid-cols-2">
-        {steps.map(([number, title, body]) => (
+      <div className="grid border-y border-zinc-200 md:grid-cols-4 md:divide-x md:divide-zinc-200">
+        {steps.map(([number, title, body], index) => (
           <article
             key={number}
-            className="rounded-3xl border border-zinc-200 bg-white p-6 sm:p-8"
+            className={`border-b border-zinc-200 py-5 md:border-b-0 md:px-5 md:py-6 ${
+              index === steps.length - 1 ? "border-b-0" : ""
+            }`}
           >
             <p className="text-sm font-medium text-[#E85D00]">{number}</p>
-            <h3 className="mt-6 text-xl font-semibold sm:text-2xl">{title}</h3>
-            <p className="mt-4 text-base leading-7 text-zinc-600">{body}</p>
+            <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+            <p className="mt-3 text-sm leading-6 text-zinc-600">{body}</p>
           </article>
         ))}
       </div>

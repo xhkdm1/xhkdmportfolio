@@ -95,7 +95,7 @@ export default function Research() {
           </p>
         </header>
 
-        <div className="mt-16">
+        <div className="mt-12">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             A · Desk Research
           </p>
@@ -124,31 +124,24 @@ export default function Research() {
             ))}
           </ol>
 
-          <div className="mt-10 overflow-x-auto">
-            <div className="min-w-[760px] border-t border-zinc-300">
-              <div className="grid grid-cols-[0.8fr_1.1fr_1.2fr_1.2fr] border-b border-zinc-200 py-3 text-xs font-medium uppercase tracking-[0.1em] text-zinc-400">
-                <span>확인한 사례</span>
-                <span>예시</span>
-                <span>살펴본 구조</span>
-                <span>이후 판단에 준 영향</span>
-              </div>
-              {researchReferences.map((item) => (
-                <div
-                  key={item.source}
-                  className="grid grid-cols-[0.8fr_1.1fr_1.2fr_1.2fr] border-b border-zinc-200 py-5 text-sm leading-6"
-                >
-                  <strong className="font-medium text-zinc-900">
-                    {item.source}
-                  </strong>
-                  <span className="pr-5 text-zinc-500">{item.examples}</span>
-                  <span className="pr-5 text-zinc-700">{item.focus}</span>
-                  <span className="text-zinc-700">{item.impact}</span>
-                </div>
-              ))}
-            </div>
+          <div className="mt-8 grid overflow-hidden rounded-2xl border border-zinc-200 bg-white md:grid-cols-2 md:divide-x md:divide-zinc-200">
+            {researchReferences.map((item) => (
+              <article key={item.source} className="border-b border-zinc-200 p-5 last:border-b-0 md:border-b-0">
+                <p className="text-sm font-medium text-zinc-900">{item.source}</p>
+                <p className="mt-2 text-xs leading-5 text-zinc-500">
+                  {item.examples}
+                </p>
+                <p className="mt-4 text-sm leading-6 text-zinc-700">
+                  {item.focus}
+                </p>
+                <p className="mt-2 text-sm leading-6 text-zinc-500">
+                  {item.impact}
+                </p>
+              </article>
+            ))}
           </div>
 
-          <div className="mt-10 border-l-2 border-[#2AC1BC] pl-5">
+          <div className="mt-8 border-l-2 border-[#2AC1BC] pl-5">
             <p className="text-sm font-medium text-zinc-950">
               앱 리뷰 약 280건
             </p>
@@ -160,7 +153,7 @@ export default function Research() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-14">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             B · Interview Setup
           </p>
@@ -170,7 +163,7 @@ export default function Research() {
             주문 전에 어떤 비교를 하는지 살폈습니다.
           </h3>
 
-          <div className="mt-8 grid gap-8 border-y border-zinc-200 py-8 md:grid-cols-[0.35fr_1fr]">
+          <div className="mt-6 grid gap-6 border-y border-zinc-200 py-6 md:grid-cols-[0.35fr_1fr]">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                 Participants
@@ -196,11 +189,11 @@ export default function Research() {
             </div>
           </div>
 
-          <div className="mt-8">
+          <div className="mt-6">
             <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
               인터뷰 전 가설
             </p>
-            <div className="mt-4 flex flex-wrap gap-2">
+            <div className="mt-3 flex flex-wrap gap-2">
               {hypothesisTypes.map((type) => (
                 <span
                   key={type}
@@ -210,14 +203,14 @@ export default function Research() {
                 </span>
               ))}
             </div>
-            <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-500">
+            <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-500">
               네 항목은 인터뷰를 준비하며 세운 행동 유형 가설이며, 확정된
               사용자 유형이나 페르소나가 아닙니다.
             </p>
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-16">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             C · Interview Evidence
           </p>
@@ -264,7 +257,7 @@ export default function Research() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-16">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             D · Affinity Synthesis
           </p>
@@ -318,7 +311,7 @@ export default function Research() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-14">
           <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             E · Survey
           </p>
@@ -373,7 +366,7 @@ export default function Research() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-14">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
             F · Analysis Shift
           </p>
@@ -383,7 +376,7 @@ export default function Research() {
             반복된 행동과 기능 필요를 중심으로 다시 살폈습니다.
           </h3>
 
-          <div className="mt-8 grid gap-6 border-y border-zinc-200 py-8 md:grid-cols-[1fr_auto_1fr] md:items-center">
+          <div className="mt-6 grid gap-5 border-y border-zinc-200 py-6 md:grid-cols-[1fr_auto_1fr] md:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
                 인터뷰 전
@@ -408,7 +401,7 @@ export default function Research() {
           </div>
         </div>
 
-        <div className="mt-20">
+        <div className="mt-14">
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
             G · Research Takeaway
           </p>
@@ -417,7 +410,7 @@ export default function Research() {
             <br />
             세 가지 질문을 남겼습니다.
           </h3>
-          <ol className="mt-8 border-t border-zinc-300">
+          <ol className="mt-6 border-t border-zinc-300">
             {takeawayQuestions.map((question, index) => (
               <li
                 key={question}

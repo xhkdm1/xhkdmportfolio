@@ -222,9 +222,6 @@ export default function Home() {
                 >
                   GitHub
                 </a>
-
-                <br />
-                LinkedIn
               </p>
             </div>
           </div>

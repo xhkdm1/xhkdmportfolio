@@ -2,7 +2,7 @@ export default function TrialAccountGuide() {
   return (
     <details className="mt-6 rounded-3xl border border-zinc-200 bg-zinc-50 p-6 open:bg-white sm:p-7">
       <summary className="cursor-pointer font-medium">체험 계정 안내</summary>
-      <div className="allow-text-selection cursor-text">
+      <div className="cursor-text">
         <p className="mt-4 max-w-3xl text-sm leading-6 text-zinc-600">
           WithBuddy는 회사 계정으로 로그인하는 서비스입니다. 아래 체험
           계정으로 신입사원과 관리자 화면을 각각 확인할 수 있습니다.

@@ -314,14 +314,10 @@ export default function ArtieCaseStudyCore() {
 
           <ServiceActors />
 
-          <div className="mt-8 grid gap-3 border-y border-zinc-200 py-6 sm:grid-cols-[10rem_1fr] sm:gap-8">
-            <p className="text-sm font-medium text-zinc-950">Scope reflection</p>
-            <p className="max-w-[720px] text-base leading-7 text-zinc-600">
-              관람자, 창작자, 공간 운영자 문제를 함께 다루면서 제품 범위가
-              넓어졌습니다. 핵심 흐름을 먼저 검증하지 못한 점은 이 프로젝트의
-              한계입니다.
-            </p>
-          </div>
+          <p className="mt-8 max-w-[820px] border-y border-zinc-200 py-5 text-base leading-7 text-zinc-600">
+            제품 범위를 넓게 설계했지만, 모든 역할의 핵심 흐름을 동일한
+            깊이로 검증하지는 못했습니다.
+          </p>
         </div>
       </section>
 

@@ -156,18 +156,18 @@ export default function WithBuddyPage() {
               ))}
             </dl>
 
-            <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
-              <div className="flex h-full min-h-[168px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
+            <div className="grid items-start gap-3 sm:gap-4 lg:grid-cols-[1.35fr_0.65fr]">
+              <div className="flex min-h-[156px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
                 <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">Contribution</p>
                 <p className="mt-5 text-xl font-semibold leading-7 tracking-[-0.02em]">Product Design · Design System · QA</p>
                 <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-600">제품 UI와 Admin Console, WDS, 화면 상태와 QA 기준을 설계했습니다.</p>
               </div>
 
-              <div className="flex h-full min-h-[168px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
+              <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
                 <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">AI Tools</p>
-                <div className="mt-5 flex max-w-md flex-wrap content-start gap-2">
+                <div className="mt-3 flex max-w-md flex-wrap gap-1.5">
                   {["ChatGPT", "Claude", "Figma Make", "Codex", "Stitch"].map((tool) => (
-                    <span key={tool} className="rounded-full border border-zinc-200 bg-zinc-50 px-3.5 py-2 text-xs font-medium text-zinc-700">{tool}</span>
+                    <span key={tool} className="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-medium text-zinc-600">{tool}</span>
                   ))}
                 </div>
               </div>
