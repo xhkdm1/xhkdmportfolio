@@ -24,9 +24,9 @@ const followUp = [
 export default function DecisionLimits() {
   return (
     <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl">
         <header className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">06 · Decision &amp; Limits</p>
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-zinc-500">06 · Decision &amp; Limits</p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             두 구조의 차이는 확인했지만,
             <br />
@@ -42,7 +42,7 @@ export default function DecisionLimits() {
 
         <div className="mt-12 grid border-y border-zinc-200 py-8 md:grid-cols-2">
           <div className="pb-8 md:pb-0 md:pr-10">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-[#008A95]">
               확인한 것
             </p>
             <ul className="mt-5 space-y-4">
@@ -55,7 +55,7 @@ export default function DecisionLimits() {
           </div>
 
           <div className="border-t border-zinc-200 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
-            <p className="text-sm font-semibold uppercase tracking-[0.14em] text-zinc-500">
+            <p className="text-sm font-medium uppercase tracking-[0.14em] text-zinc-500">
               확인하지 못한 것
             </p>
             <ul className="mt-5 space-y-4">
@@ -69,7 +69,7 @@ export default function DecisionLimits() {
         </div>
 
         <div className="mt-10 border-l-2 border-[#2AC1BC] bg-zinc-50 px-6 py-5">
-          <p className="text-sm font-semibold text-zinc-900">검증 범위</p>
+          <p className="text-sm font-medium text-zinc-900">검증 범위</p>
           <p className="mt-2 max-w-4xl text-sm leading-6 text-zinc-600">
             이번 테스트는 참여자의 인식과 선호를 확인한 콘셉트
             테스트입니다. 과업 시간, 이동 횟수, 오류율 등 실제 사용성
@@ -78,7 +78,7 @@ export default function DecisionLimits() {
         </div>
 
         <div className="mt-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-400">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-zinc-400">
             후속 제안
           </p>
           <h3 className="mt-3 text-xl font-semibold tracking-[-0.025em] text-zinc-950">

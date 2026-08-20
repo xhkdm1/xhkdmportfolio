@@ -794,7 +794,7 @@ export default function QAValidationPage() {
           </div>
 
           <div className="mt-8 rounded-3xl bg-zinc-950 p-8 text-white">
-            <p className="max-w-3xl text-2xl font-semibold leading-9">
+            <p className="max-w-3xl text-2xl font-medium leading-9">
               QA의 목적은 오류 목록을 만드는 것이 아니라, 다음 설계
               결정의 근거를 만드는 것이었습니다.
             </p>

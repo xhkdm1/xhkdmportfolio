@@ -369,6 +369,11 @@ export default function WithBuddyCaseStudyPage() {
                 ].map(([title, text]) => <div key={title} className="rounded-2xl bg-white/5 p-5"><p className="font-medium">{title}</p><p className="mt-3 text-sm leading-6 text-zinc-300">{text}</p></div>)}
               </div>
               <Image src="/images/withbuddy/08-admin-console.png" alt="WithBuddy 관리자 대시보드" width={1920} height={1080} className="mt-8 h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                <Image src="/images/withbuddy/withbuddy-admin-docs.png" alt="등록 문서 목록과 문서 관리 상태를 보여주는 관리자 화면" width={1440} height={1146} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
+                <Image src="/images/withbuddy/withbuddy-admin-account-create-validation.png" alt="입사일과 필수 정보 검증을 포함한 관리자 계정 생성 화면" width={1440} height={1024} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
+                <Image src="/images/withbuddy/withbuddy-admin-account-list-status.png" alt="계정 활성화와 비활성화 상태를 구분한 관리자 계정 목록" width={1440} height={1024} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain md:col-span-2" />
+              </div>
             </article>
           </div>
           <Image src="/images/withbuddy/07-mybuddy-states.png" alt="WithBuddy 답변 상태별 사용자 화면" width={1920} height={1080} className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 object-contain" />
@@ -376,7 +381,7 @@ export default function WithBuddyCaseStudyPage() {
 
         <Section id="validation" eyebrow="06 · 검증과 개선" title={<>사용하면서 다시 사람을 찾게 되는<br />지점을 확인했습니다.</>} description="2026년 7월 4일부터 9일까지 13명이 참여한 제한적 오픈테스트와 사용 로그를 분석했습니다. 관리자 화면은 10명이 사용했습니다. 실제 조직의 온보딩 기간 전체를 검증한 결과는 아닙니다.">
           <div className="grid gap-5 md:grid-cols-2">{findings.map(([number, title, next]) => <article key={number} className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-400">확인 {number}</p><h3 className="mt-3 text-xl font-semibold leading-8">{title}</h3><p className="mt-4 text-sm leading-6 text-zinc-600">{next}</p></article>)}</div>
-          <div className="mt-8 rounded-3xl bg-zinc-950 p-7 text-white"><p className="max-w-3xl text-xl font-semibold leading-8">사용 의향은 높았지만, 답변의 완결성과 실패 안내, 관리자 작업 과정에서는 문제가 남았습니다.</p></div>
+            <div className="mt-8 rounded-3xl bg-zinc-950 p-7 text-white"><p className="max-w-3xl text-xl font-medium leading-8">사용 의향은 높았지만, 답변의 완결성과 실패 안내, 관리자 작업 과정에서는 문제가 남았습니다.</p></div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><MetricCard value="8.4 / 10" label="사용 의향" /><MetricCard value="7.4 / 10" label="답변 이해도·신뢰도" /><MetricCard value="7.9 / 10" label="관리자 기능 이해도·유용성" /><MetricCard value="약 25%" label="응답 실패 로그" note="no_result 또는 out_of_scope" /></div>
           <blockquote className="mt-8 rounded-3xl bg-zinc-50 p-7 text-lg font-medium leading-8 text-zinc-800">
             “기존에 업로드한 문서를 조회·다운로드할 수 있는 기능이 있으면 좋겠다. 담당자 변경 시 인수인계·문서 관리가 불편할 것.”

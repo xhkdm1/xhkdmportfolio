@@ -10,9 +10,9 @@ const projectInfo = [
 export default function Hero() {
   return (
     <section className="bg-[#F5FBFC] px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl">
         <div className="max-w-5xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#008A95]">
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#008A95]">
             01 · Overview
           </p>
 
@@ -34,7 +34,7 @@ export default function Hero() {
         <dl className="mt-12 grid gap-x-10 gap-y-6 border-t border-[#B8DDE0] pt-8 sm:grid-cols-2 lg:grid-cols-4">
           {projectInfo.map(([term, value]) => (
             <div key={term}>
-              <dt className="text-xs font-semibold uppercase tracking-[0.12em] text-[#008A95]">
+              <dt className="text-xs font-medium uppercase tracking-[0.12em] text-[#008A95]">
                 {term}
               </dt>
               <dd className="mt-2 text-sm font-medium leading-6 text-zinc-900">

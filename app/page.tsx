@@ -16,7 +16,7 @@ const featuredWorks = [
     meta: "UX Research · Information Architecture · Product Thinking · 2026",
     href: "/projects/kakaot",
     liveUrl: null,
-    thumbnail: "",
+    thumbnail: "/images/kakaot/hero.png",
   },
   {
     title: "배달의민족 장바구니 개선",
@@ -25,7 +25,7 @@ const featuredWorks = [
     meta: "UX Research · Concept Test · Product Thinking · 2026",
     href: "/projects/baemin",
     liveUrl: null,
-    thumbnail: "/images/baemin-thumbnail.png",
+    thumbnail: "/images/baemin/01-project-overview.png",
   },
   {
     title: "Artie",
@@ -39,18 +39,18 @@ const featuredWorks = [
 
 const otherWorks = [
   {
-    title: "Seed Design System Clone & QA",
-    description:
-      "당근 Seed Design System을 재구성하고, 다른 디자이너가 실제 화면을 조립할 수 있는지 검증한 프로젝트",
-    meta: "Design System · Component QA · Figma · 2026",
-    href: "/projects/seed-design",
-  },
-  {
     title: "PADO",
     description:
       "팬의 창작과 참여를 중심으로 새로운 팬덤 경험을 제안한 플랫폼",
     meta: "Fan Platform · Product Concept · UX/UI Design · 2025",
     href: "/projects/pado",
+  },
+  {
+    title: "Seed Design System Clone & QA",
+    description:
+      "당근 Seed Design System을 재구성하고, 다른 디자이너가 실제 화면을 조립할 수 있는지 검증한 프로젝트",
+    meta: "Design System · Component QA · Figma · 2026",
+    href: "/projects/seed-design",
   }
 ];
 

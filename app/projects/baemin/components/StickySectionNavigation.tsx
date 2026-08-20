@@ -32,7 +32,7 @@ export default function StickySectionNavigation({ items }: Props) {
 
   return (
     <nav className="sticky top-16 z-30 border-y border-zinc-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto max-w-6xl overflow-x-auto px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto w-full max-w-5xl overflow-x-auto px-5 sm:px-8 lg:px-12">
         <ul className="flex min-w-max items-center gap-8 py-5">
           {items.map((item) => (
             <li key={item.id}>

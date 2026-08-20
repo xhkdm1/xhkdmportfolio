@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -135,7 +136,7 @@ export default function WDSPage() {
             ].map(([label, text], index) => (
               <article key={label} className={index === 1 ? "rounded-3xl bg-zinc-950 p-6 text-white" : "rounded-3xl border border-zinc-200 p-6"}>
                 <p className={index === 1 ? "text-sm text-zinc-400" : "text-sm text-zinc-500"}>{label}</p>
-                <p className="mt-3 text-lg font-semibold leading-7">{text}</p>
+                <p className="mt-3 text-lg font-medium leading-7">{text}</p>
               </article>
             ))}
           </div>
@@ -257,10 +258,14 @@ export default function WDSPage() {
             <article className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-500">Basic</p><h3 className="mt-3 text-2xl font-semibold">단순 요소</h3><ul className="mt-6 space-y-3 text-sm text-zinc-600"><li>Overview와 사용 목적</li><li>기본 상태와 시각 예시</li><li>사용할 때와 피할 때</li></ul></article>
             <article className="rounded-3xl bg-zinc-950 p-7 text-white"><p className="text-sm text-zinc-400">Extended</p><h3 className="mt-3 text-2xl font-semibold">입력·상태·권한 영향이 큰 요소</h3><ul className="mt-6 space-y-3 text-sm text-zinc-300"><li>Properties와 조합 규칙</li><li>Default · Active · Error · ReadOnly</li><li>Examples와 Accessibility</li><li>Validation과 예외 조건</li></ul></article>
           </div>
+          <figure className="mt-8 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 sm:p-5">
+            <Image src="/images/withbuddy/withbuddy-wds-components-index.png" alt="WithBuddy WDS 컴포넌트 분류와 목차" width={1520} height={1732} className="h-auto w-full rounded-2xl object-contain" />
+          </figure>
           <article className="mt-8 rounded-3xl border border-zinc-200 p-7 sm:p-8">
             <p className="text-sm text-zinc-500">Representative Component</p><h3 className="mt-3 text-2xl font-semibold">ChatComposer</h3>
             <p className="mt-5 max-w-3xl leading-7 text-zinc-600">질문 입력, 전송 가능 여부, 오류, 읽기 전용 상태, Quick Question 조합을 함께 다뤄야 했습니다. 단순 Textarea가 아니라 채팅 맥락과 상태를 관리하는 복합 컴포넌트로 정의했습니다.</p>
             <div className="mt-6 flex flex-wrap gap-2">{["Default", "Active", "Error", "ReadOnly", "Quick Question", "Properties", "Examples", "Accessibility"].map((item) => <span key={item} className="rounded-full bg-zinc-100 px-4 py-2 text-sm text-zinc-700">{item}</span>)}</div>
+            <Image src="/images/withbuddy/withbuddy-wds-chat-composer.png" alt="ChatComposer 컴포넌트의 상태와 사용 기준" width={1520} height={3469} className="mt-8 h-auto w-full rounded-2xl border border-zinc-200 bg-zinc-50 object-contain" />
             <p className="mt-6 text-sm leading-6 text-zinc-500">명세 초안을 만들 때 AI를 활용했지만, 실제 Figma 레이어와 토큰을 다시 확인해 적용했습니다.</p>
           </article>
         </Section>
@@ -270,6 +275,9 @@ export default function WDSPage() {
             <article className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-500">Screen Structure</p><h3 className="mt-3 text-xl font-semibold">Login · MyBuddy · Admin</h3><p className="mt-4 text-sm leading-6 text-zinc-600">제품 영역과 상태를 Screen ID로 구분하고, 화면과 컴포넌트의 연결 관계를 기록했습니다.</p><code className="mt-5 block rounded-2xl bg-zinc-50 p-4 text-xs text-zinc-700">MYBUDDY-CHAT-02-PC</code></article>
             <article className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-500">Annotation</p><h3 className="mt-3 text-xl font-semibold">화면 안에 판단 근거 남기기</h3><p className="mt-4 text-sm leading-6 text-zinc-600">Content · Behavior · Validation · Data/API · State · Usage를 구분해 개발에 필요한 조건을 화면 가까이에 기록했습니다.</p></article>
           </div>
+          <figure className="mt-8 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 sm:p-5">
+            <Image src="/images/withbuddy/withbuddy-wds-annotation-badges.png" alt="UI 설계서의 Annotation 배지 분류 기준" width={4096} height={685} className="h-auto w-full rounded-2xl object-contain" />
+          </figure>
         </Section>
 
         <Section id="handoff" eyebrow="06 · 개발 전달과 QA" title="구두로 설명하던 상태와 예외를 문서에 남겼습니다." description="디자인과 개발에서 같은 상태를 다르게 해석하지 않도록 API 응답별 화면과 검증 기준을 정리했습니다.">
@@ -279,6 +287,9 @@ export default function WDSPage() {
             <article className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-500">Naming</p><h3 className="mt-3 text-2xl font-semibold">Figma와 코드에서 같은 이름을 사용했습니다.</h3><p className="mt-5 text-sm leading-7 text-zinc-600">컴포넌트와 Screen ID의 이름을 맞추고 상태 이름을 통일해, 디자인과 개발에서 같은 대상을 다르게 부르는 일을 줄였습니다.</p></article>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">{["Naming", "Screen ID", "Annotation", "State / Validation", "QA Scenario"].map((item) => <div key={item} className="rounded-2xl bg-zinc-50 p-5 text-sm font-medium">{item}</div>)}</div>
+          <figure className="mt-8 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 sm:p-5">
+            <Image src="/images/withbuddy/withbuddy-api-state-ui-mapping.png" alt="API 응답과 UI 상태를 연결한 개발 전달 문서" width={1372} height={4096} className="h-auto w-full rounded-2xl object-contain" />
+          </figure>
         </Section>
 
         <Section id="learnings" eyebrow="07 · 배운 점" title="컴포넌트 수보다 함께 확인할 기준이 중요했습니다.">

@@ -80,15 +80,15 @@ const takeawayQuestions = [
 export default function Research() {
   return (
     <section className="bg-zinc-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl">
         <header className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">03 · Research</p>
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-zinc-500">03 · Research</p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             리뷰만으로 판단하기 어려워,
             <br />
             주문 전 비교 행동을 인터뷰에서 확인했습니다.
           </h2>
-          <p className="mt-6 max-w-3xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
+            <p className="mt-6 max-w-3xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
             기존 장바구니에서 이전 선택을 유지하기 어려운 상황만으로 사용자
             문제를 단정하지 않았습니다. 앱 리뷰와 유사 서비스, 인터뷰와
             설문을 통해 실제 주문 전 비교 행동을 살폈습니다.
@@ -96,7 +96,7 @@ export default function Research() {
         </header>
 
         <div className="mt-16">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             A · Desk Research
           </p>
           <h3 className="mt-4 max-w-3xl text-2xl font-semibold leading-9 tracking-[-0.035em] text-zinc-950 sm:text-3xl">
@@ -126,7 +126,7 @@ export default function Research() {
 
           <div className="mt-10 overflow-x-auto">
             <div className="min-w-[760px] border-t border-zinc-300">
-              <div className="grid grid-cols-[0.8fr_1.1fr_1.2fr_1.2fr] border-b border-zinc-200 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-zinc-400">
+              <div className="grid grid-cols-[0.8fr_1.1fr_1.2fr_1.2fr] border-b border-zinc-200 py-3 text-xs font-medium uppercase tracking-[0.1em] text-zinc-400">
                 <span>확인한 사례</span>
                 <span>예시</span>
                 <span>살펴본 구조</span>
@@ -137,7 +137,7 @@ export default function Research() {
                   key={item.source}
                   className="grid grid-cols-[0.8fr_1.1fr_1.2fr_1.2fr] border-b border-zinc-200 py-5 text-sm leading-6"
                 >
-                  <strong className="font-semibold text-zinc-900">
+                  <strong className="font-medium text-zinc-900">
                     {item.source}
                   </strong>
                   <span className="pr-5 text-zinc-500">{item.examples}</span>
@@ -149,7 +149,7 @@ export default function Research() {
           </div>
 
           <div className="mt-10 border-l-2 border-[#2AC1BC] pl-5">
-            <p className="text-sm font-semibold text-zinc-950">
+            <p className="text-sm font-medium text-zinc-950">
               앱 리뷰 약 280건
             </p>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-zinc-600">
@@ -161,7 +161,7 @@ export default function Research() {
         </div>
 
         <div className="mt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             B · Interview Setup
           </p>
           <h3 className="mt-4 max-w-3xl text-2xl font-semibold leading-9 tracking-[-0.035em] text-zinc-950 sm:text-3xl">
@@ -172,7 +172,7 @@ export default function Research() {
 
           <div className="mt-8 grid gap-8 border-y border-zinc-200 py-8 md:grid-cols-[0.35fr_1fr]">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                 Participants
               </p>
               <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-[#008A95]">
@@ -180,7 +180,7 @@ export default function Research() {
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                 확인한 행동
               </p>
               <ul className="mt-3 grid gap-x-8 gap-y-3 sm:grid-cols-2">
@@ -197,7 +197,7 @@ export default function Research() {
           </div>
 
           <div className="mt-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
               인터뷰 전 가설
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
@@ -218,7 +218,7 @@ export default function Research() {
         </div>
 
         <div className="mt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             C · Interview Evidence
           </p>
           <h3 className="mt-4 max-w-3xl text-2xl font-semibold leading-9 tracking-[-0.035em] text-zinc-950 sm:text-3xl">
@@ -233,14 +233,14 @@ export default function Research() {
                 key={item.summary}
                 className="grid gap-4 border-b border-zinc-200 py-6 md:grid-cols-[5rem_1.25fr_0.75fr]"
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                   Evidence {String(index + 1).padStart(2, "0")}
                 </p>
                 <p className="text-base leading-7 text-zinc-800">
                   {item.summary}
                 </p>
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[#008A95]">
+                  <p className="text-xs font-medium uppercase tracking-[0.12em] text-[#008A95]">
                     관찰
                   </p>
                   <p className="mt-2 text-sm leading-6 text-zinc-600">
@@ -252,7 +252,7 @@ export default function Research() {
           </div>
 
           <div className="mt-6 border-l-2 border-zinc-300 pl-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+            <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
               Different Pattern
             </p>
             <p className="mt-2 max-w-3xl text-sm leading-6 text-zinc-600">
@@ -265,7 +265,7 @@ export default function Research() {
         </div>
 
         <div className="mt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             D · Affinity Synthesis
           </p>
           <h3 className="mt-4 max-w-3xl text-2xl font-semibold leading-9 tracking-[-0.035em] text-zinc-950 sm:text-3xl">
@@ -279,7 +279,7 @@ export default function Research() {
           </p>
 
           <div className="mt-8 border-t border-zinc-300">
-            <div className="hidden grid-cols-[1fr_1fr_1fr] border-b border-zinc-200 py-3 text-xs font-semibold uppercase tracking-[0.1em] text-zinc-400 md:grid">
+            <div className="hidden grid-cols-[1fr_1fr_1fr] border-b border-zinc-200 py-3 text-xs font-medium uppercase tracking-[0.1em] text-zinc-400 md:grid">
               <span>인터뷰에서 확인한 행동</span>
               <span className="pl-6">반복 행동에서 본 의미</span>
               <span className="pl-6">이어진 설계 질문</span>
@@ -290,7 +290,7 @@ export default function Research() {
                 className="grid gap-5 border-b border-zinc-200 py-6 md:grid-cols-[1fr_1fr_1fr]"
               >
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-zinc-400 md:hidden">
+                  <p className="text-xs font-medium uppercase tracking-[0.1em] text-zinc-400 md:hidden">
                     인터뷰에서 확인한 행동
                   </p>
                   <p className="mt-2 text-sm leading-6 text-zinc-700 md:mt-0">
@@ -298,7 +298,7 @@ export default function Research() {
                   </p>
                 </div>
                 <div className="border-t border-zinc-100 pt-4 md:border-l md:border-t-0 md:pl-6 md:pt-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-zinc-400 md:hidden">
+                  <p className="text-xs font-medium uppercase tracking-[0.1em] text-zinc-400 md:hidden">
                     반복 행동에서 본 의미
                   </p>
                   <p className="mt-2 text-sm leading-6 text-zinc-700 md:mt-0">
@@ -306,7 +306,7 @@ export default function Research() {
                   </p>
                 </div>
                 <div className="border-t border-zinc-100 pt-4 md:border-l md:border-t-0 md:pl-6 md:pt-0">
-                  <p className="text-xs font-semibold uppercase tracking-[0.1em] text-[#008A95]">
+                  <p className="text-xs font-medium uppercase tracking-[0.1em] text-[#008A95]">
                     설계 질문
                   </p>
                   <p className="mt-2 text-sm font-medium leading-6 text-zinc-900">
@@ -319,12 +319,12 @@ export default function Research() {
         </div>
 
         <div className="mt-20">
-          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[#008A95]">
+          <p className="text-xs font-medium uppercase tracking-[0.14em] text-[#008A95]">
             E · Survey
           </p>
           <div className="mt-4 grid gap-6 border-y border-zinc-200 py-7 md:grid-cols-[0.35fr_1fr] md:items-center">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                 Participants
               </p>
               <p className="mt-2 text-3xl font-semibold tracking-[-0.04em] text-[#008A95]">
@@ -332,7 +332,7 @@ export default function Research() {
               </p>
             </div>
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                 추가로 확인한 내용
               </p>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-700">
@@ -342,7 +342,7 @@ export default function Research() {
             </div>
             <div className="grid gap-6 border-t border-zinc-200 pt-6 md:col-span-2 lg:grid-cols-2">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.12em] text-zinc-400">
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
                   Question
                 </p>
                 <p className="mt-3 text-sm leading-6 text-zinc-700">

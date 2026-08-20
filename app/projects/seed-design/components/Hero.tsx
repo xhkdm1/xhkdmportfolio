@@ -1,6 +1,6 @@
 import ImagePlaceholder from "./ImagePlaceholder";
 
-const tags = ["Design System", "Figma Variables", "Component QA", "Assembly Test"];
+const tags = ["Design System", "Figma Variables", "Component QA"];
 
 export default function Hero() {
   return (
@@ -14,7 +14,7 @@ export default function Hero() {
       <h1 className="mt-4 max-w-4xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
         Seed Design System
         <br />
-        Clone & QA
+        Rebuild & QA
       </h1>
 
       <div className="mt-8">
@@ -28,11 +28,11 @@ export default function Hero() {
           <span>↗</span>
         </a>
       </div>
-      
+
       <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl">
-        공개된 Seed Design System을 토큰부터 컴포넌트까지 재구성하고,
-        다른 디자이너가 실제 화면을 조립할 수 있는지 Component Assembly
-        Test로 확인했습니다.
+        공개된 Seed Design System을 Primitive와 Semantic 구조로 재구성한 뒤,
+        다른 디자이너가 실제 화면을 조립할 수 있는지를 Component Assembly
+        Test로 검증했습니다.
       </p>
       <div className="mt-8 flex flex-wrap gap-2">
         {tags.map((tag) => (
@@ -47,8 +47,44 @@ export default function Hero() {
       <div className="mt-12">
         <ImagePlaceholder
           src="/images/seed-design/hero.webp"
-          label="Foundation · Component · Prototype · QA"
+          label="Foundation · Component · Assembly Test"
         />
+      </div>
+
+      <div className="mt-10 space-y-3 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-3 sm:space-y-4 sm:p-4">
+        <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+          {[
+            ["Role", "Design System · QA"],
+            ["Team", "4인"],
+            ["Duration", "2026"],
+            ["Tools", "Figma"],
+          ].map(([label, value]) => (
+            <div
+              key={label}
+              className="flex min-h-[112px] min-w-0 flex-col justify-between rounded-2xl border border-zinc-200 bg-white p-5 sm:min-h-[124px] sm:p-6"
+            >
+              <dt className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
+                {label}
+              </dt>
+              <dd className="mt-5 break-words text-base font-semibold leading-6 text-zinc-900 sm:text-lg">
+                {value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <div className="rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
+          <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">
+            Contribution
+          </p>
+          <p className="mt-5 text-xl font-semibold leading-7 text-zinc-900">
+            Foundation Token · Component · Component Assembly Test
+          </p>
+          <p className="mt-3 max-w-3xl text-sm leading-6 text-zinc-600">
+            Foundation Token과 Component 제작에 참여하고, QA 질문을 재정의해
+            Component Assembly Test를 설계·진행했습니다.
+          </p>
+        </div>
       </div>
     </section>
   );

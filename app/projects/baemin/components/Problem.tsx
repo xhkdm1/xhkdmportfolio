@@ -1,9 +1,9 @@
 export default function Problem() {
   return (
     <section className="bg-white px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl">
         <div className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-zinc-500">
             02 · Problem
           </p>
 
@@ -20,7 +20,7 @@ export default function Problem() {
         </div>
 
         <div className="mt-16 border-t-2 border-[#2AC1BC] py-8 sm:py-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-[#008A95]">
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-[#008A95]">
             Problem Definition
           </p>
 

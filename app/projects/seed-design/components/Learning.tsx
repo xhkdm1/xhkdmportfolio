@@ -1,21 +1,20 @@
 import SectionHeading from "./SectionHeading";
 
 const learnings = [
-  "컴포넌트의 외형보다 Anatomy와 Property가 설계 의도를 설명한다는 점을 체감했습니다.",
-  "상세 스펙이 없는 영역은 실제 화면 구조와 구현 사례를 비교해 팀 기준을 세웠습니다.",
-  "Auto Layout, Variable, Variant, Property를 실제 구조에 적용했습니다.",
-  "문서가 여러 직군이 공통으로 이해하기 위한 구조라는 점을 이해했습니다.",
-  "다음에는 Dark Mode Variable과 최소 원본 중심의 구성도 시도하고 싶습니다.",
+  "컴포넌트의 외형보다 Anatomy와 Property가 설계 의도를 설명한다는 점을 확인했습니다.",
+  "상세 스펙이 부족한 영역은 실제 화면 구조와 구현 사례를 비교하며 기준을 정리해야 한다는 점을 알게 됐습니다.",
+  "Auto Layout, Variable, Variant, Property는 단순히 UI를 만드는 도구가 아니라 팀 공통 언어가 됩니다.",
+  "문서가 여러 직군이 같은 기준으로 이해할 수 있는 구조를 갖춰야 실제 협업이 원활해집니다.",
 ];
 
 export default function Learning() {
   return (
     <section className="bg-zinc-50">
-      <div className="mx-auto w-full max-w-5xl px-5 py-20 sm:px-8 md:py-28 lg:py-32">
+      <div className="mx-auto w-full max-w-6xl px-5 py-20 sm:px-8 md:py-28 lg:px-12 lg:py-32">
         <SectionHeading
           index="07"
-          eyebrow="Learning"
-          title="컴포넌트를 만드는 기술보다, 같은 기준으로 협업하는 구조를 이해했습니다."
+          eyebrow="Observed → Changed → Remaining Limit"
+          title="실제 검증을 통해, 문제를 구조 개선으로 연결할 수 있음을 확인했습니다."
         />
         <div className="grid gap-5 md:grid-cols-2">
           {learnings.map((item, index) => (
@@ -33,24 +32,16 @@ export default function Learning() {
           ))}
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-[1fr_auto_1fr] md:items-stretch">
-          <article className="rounded-3xl border border-zinc-200 bg-white p-6 sm:p-8">
-            <p className="text-sm text-zinc-500">Before</p>
-            <p className="mt-5 text-xl font-semibold leading-8 sm:text-2xl">
-              디자인 시스템은 일관된 화면을 빠르게 만들기 위한 컴포넌트
-              모음이라고 생각했습니다.
-            </p>
-          </article>
-          <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-[#FF6F0F] font-semibold text-white">
-            →
-          </div>
-          <article className="rounded-3xl bg-zinc-900 p-6 text-white sm:p-8">
-            <p className="text-sm text-white/50">After</p>
-            <p className="mt-5 text-xl font-semibold leading-8 sm:text-2xl">
-              디자인 시스템은 여러 직군이 같은 기준과 언어로 제품을 만들도록
-              돕는 협업 체계임을 이해했습니다.
-            </p>
-          </article>
+        <div className="mt-12 rounded-3xl border border-zinc-200 bg-white p-6 sm:p-8">
+          <p className="text-sm font-medium text-zinc-500">Remaining Limit</p>
+          <p className="mt-5 max-w-3xl text-xl font-semibold leading-8 sm:text-2xl">
+            이 프로젝트는 공개 시스템을 재구성하며 실제 조립 가능성을 확인하는 데 초점을 두었고,
+            장기 운영되는 Design System Governance까지는 다루지 않았습니다.
+          </p>
+          <p className="mt-5 max-w-3xl text-base leading-7 text-zinc-600">
+            이후에는 Dark Mode, Deprecated 정책, Release 기준, 코드 동기화와 같은 운영 체계가
+            다음 단계의 개선 과제로 남습니다.
+          </p>
         </div>
       </div>
     </section>

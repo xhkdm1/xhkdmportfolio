@@ -7,9 +7,9 @@ const results = [
 export default function Validation() {
   return (
     <section className="bg-zinc-50 px-5 py-20 sm:px-8 sm:py-24 lg:px-12 lg:py-28">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto w-full max-w-5xl">
         <header className="max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.16em] text-zinc-500">05 · Validation</p>
+          <p className="text-sm font-medium uppercase tracking-[0.16em] text-zinc-500">05 · Validation</p>
           <h2 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.045em] text-zinc-950 sm:text-4xl lg:text-5xl">
             비교할 때는 아코디언을,
             <br />
@@ -21,7 +21,7 @@ export default function Validation() {
         <div className="mt-14 overflow-hidden rounded-[2rem] border border-zinc-200 bg-white">
           {results.map((result, index) => (
             <article key={result.label} className={`grid gap-3 p-7 sm:grid-cols-[1fr_1fr] sm:items-center sm:p-8 ${index > 0 ? "border-t border-zinc-200" : ""}`}>
-              <p className="text-sm font-semibold leading-6 text-zinc-700">{result.label}</p>
+              <p className="text-sm font-medium leading-6 text-zinc-700">{result.label}</p>
               <p className="text-xl font-semibold tracking-[-0.025em] text-[#008A95] sm:text-right">{result.value}</p>
             </article>
           ))}
