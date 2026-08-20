@@ -3,7 +3,6 @@ import Overview from "./components/Overview";
 import Process from "./components/Process";
 import SystemBuild from "./components/SystemBuild";
 import QA from "./components/QA";
-import Findings from "./components/Findings";
 import Learning from "./components/Learning";
 import ProjectFooter from "./components/ProjectFooter";
 import TestResult from "./components/TestResult";
@@ -23,7 +22,6 @@ export default function SeedDesignPage() {
       <SystemBuild />
       <QA />
       <TestResult />
-      <Findings />
       <Learning />
       <ProjectFooter />
     </main>

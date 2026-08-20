@@ -39,7 +39,7 @@ const contributions = [
     category: "Product Concept",
     title: "기존 팬덤 플랫폼 개선 과제에서 서비스 방향을 다시 정의했습니다.",
     items: [
-      "기존 팬덤 서비스의 반복 문제와 사용자 행동을 확인",
+      "기존 팬덤 서비스의 반복 문제와 사용자 행동 분석에 참여",
       "콘텐츠 소비 이후의 창작·대화·보상 흐름을 재설계",
       "PADO 서비스 콘셉트와 핵심 가치 정리",
       "Fan Loop를 중심으로 서비스 방향 제안",
@@ -58,7 +58,7 @@ const contributions = [
   },
   {
     number: "03",
-    category: "Feedback Iteration",
+    category: "Feedback & Changes",
     title: "기업 피드백을 반영하며 문제 범위와 서비스 메시지를 수정했습니다.",
     items: [
       "초기 개선 과제에서 신규 서비스 방향으로 전환",
@@ -310,7 +310,7 @@ export default function PadoPage() {
                 팬들이 라이브를 본 뒤 콘텐츠를 재해석하고 공유하며
                 새로운 대화를 만드는 행동에 주목했습니다. 콘텐츠 소비
                 중심의 경험을 넘어 팬의 창작과 참여가 다시 팬덤의
-                성장으로 이어지는 플랫폼을 제안했습니다.
+                다음 활동으로 이어지는 플랫폼을 제안했습니다.
               </p>
 
               <div className="mt-9 flex flex-wrap gap-3">

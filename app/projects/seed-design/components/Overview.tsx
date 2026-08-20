@@ -1,3 +1,5 @@
+import ImageLightbox from "../../../components/ImageLightBox";
+
 const info = [
   ["Team", "4 Product Designers"],
   ["Scope", "Foundation · Component · Prototype · QA"],
@@ -54,6 +56,18 @@ export default function Overview() {
               </li>
             ))}
           </ul>
+        </div>
+
+        <div className="mt-12">
+          <ImageLightbox
+            src="/images/seed-design/prototype-overview.png"
+            alt="재구성한 컴포넌트로 조립한 당근 서비스 화면 모음"
+            label="Prototype Overview"
+            caption="재구성한 컴포넌트를 실제 서비스 화면 조립까지 연결했습니다."
+            aspectClassName="aspect-[3.16/1]"
+            sizes="(max-width: 768px) 100vw, 1152px"
+            priority
+          />
         </div>
       </div>
     </section>

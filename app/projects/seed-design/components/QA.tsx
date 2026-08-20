@@ -1,5 +1,5 @@
+import ImageLightbox from "../../../components/ImageLightBox";
 import SectionHeading from "./SectionHeading";
-import ImagePlaceholder from "./ImagePlaceholder";
 
 const pains = [
   "상세 스펙이 없는 컴포넌트 존재",
@@ -9,16 +9,10 @@ const pains = [
   "예외 변수 지속 발생",
 ];
 
-const metrics = [
-  "컴포넌트 유효성 검증",
-  "탐색 효율성",
-  "변수 네이밍 직관성",
-  "조립 매끄러움",
-  "사용 편의성",
-  "스타일 시스템 사용성",
-  "디자인 시스템 사용성",
-  "불편 요소 발견",
-  "유지 요소 파악",
+const assessmentAxes = [
+  ["Findability", "컴포넌트 탐색 · Naming 직관성"],
+  ["Assembly", "화면 조립 가능성 · 상태/Property 사용"],
+  ["Usability", "시스템 이해 · 불편 요소와 유지 요소"],
 ];
 
 export default function QA() {
@@ -84,6 +78,17 @@ export default function QA() {
             </p>
           </article>
         </div>
+
+        <div className="mt-10">
+          <ImageLightbox
+            src="/images/seed-design/internal-qa-board.png"
+            alt="SEED Design System 재구성 과정에서 기록한 자체 QA 보드"
+            label="Internal QA"
+            caption="공개 문서와 재구성 결과를 검토하며 스펙·네이밍·조립 문제를 기록했습니다."
+            aspectClassName="aspect-[2.32/1]"
+            sizes="(max-width: 768px) 100vw, 1024px"
+          />
+        </div>
       </section>
 
       <section className="bg-[#FFF4EC]">
@@ -94,45 +99,46 @@ export default function QA() {
             title="다른 디자이너가 실제 화면을 만들 수 있는지 30분 세션으로 확인했습니다."
             description="안내 5분 · 탐색 5분 · 제작 10분 · 질문지 10분으로 구성했습니다."
           />
-          <div className="grid items-start gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="grid gap-4 sm:grid-cols-2">
-              {[
-                ["안내", "5분"],
-                ["탐색", "5분"],
-                ["제작", "10분"],
-                ["질문지", "10분"],
-              ].map(([label, time]) => (
+          <div className="rounded-2xl border border-[#FFD5B8] bg-white px-5 py-4 text-sm leading-6 text-zinc-700 sm:px-6">
+            <span className="font-medium text-zinc-950">30 min Session</span>
+            <span className="mx-2 text-zinc-300">·</span>
+            안내 5분 → 탐색 5분 → 화면 제작 10분 → 질문지 10분
+          </div>
+
+          <div className="mt-8">
+            <ImageLightbox
+              src="/images/seed-design/assembly-test-result.png"
+              alt="Assembly Test의 목표 화면과 참여자가 조립한 결과 화면"
+              label="Assembly Result"
+              caption="완성 화면과 참여자 조립 결과를 같은 기준으로 확인했습니다."
+              aspectClassName="aspect-[7/5]"
+              sizes="(max-width: 768px) 100vw, 1152px"
+            />
+          </div>
+
+          <div className="mt-8 grid items-start gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+            <ImageLightbox
+              src="/images/seed-design/assembly-test-guide.png"
+              alt="30분 Component Assembly Test 안내와 화면 조립 순서"
+              label="Test Guide"
+              caption="탐색부터 Property 조정과 화면 제작까지 수행 순서를 안내했습니다."
+              aspectClassName="aspect-[7/8]"
+              sizes="(max-width: 1024px) 100vw, 620px"
+            />
+
+            <div className="grid gap-4">
+              {assessmentAxes.map(([title, description]) => (
                 <article
-                  key={label}
-                  className="rounded-3xl border border-[#FFD5B8] bg-white p-6"
+                  key={title}
+                  className="rounded-2xl border border-[#FFD5B8] bg-white p-5"
                 >
-                  <p className="text-sm text-zinc-500">{label}</p>
-                  <p className="mt-3 text-3xl font-semibold text-[#E85D00]">
-                    {time}
+                  <p className="text-sm font-medium text-[#E85D00]">{title}</p>
+                  <p className="mt-2 text-sm leading-6 text-zinc-700">
+                    {description}
                   </p>
                 </article>
               ))}
             </div>
-            <ImagePlaceholder
-              src="/images/seed-design/assembly-test.webp"
-              label="Component Assembly Test 진행 화면"
-              ratio="portrait"
-            />
-          </div>
-          <div className="mt-12 grid gap-4 md:grid-cols-3">
-            {metrics.map((metric, index) => (
-              <article
-                key={metric}
-                className="rounded-2xl border border-[#FFD5B8] bg-white p-5"
-              >
-                <p className="text-xs font-medium text-zinc-400">
-                  {String(index + 1).padStart(2, "0")}
-                </p>
-                <p className="mt-3 text-sm font-medium leading-6 text-zinc-700">
-                  {metric}
-                </p>
-              </article>
-            ))}
           </div>
         </div>
       </section>

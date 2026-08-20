@@ -158,47 +158,27 @@ function ServiceActors() {
         </p>
       </header>
 
-      <div className="mt-9 grid sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-9 grid items-stretch gap-5 md:grid-cols-2">
         {serviceActors.map((actor) => (
           <article
             key={actor.role}
-            className="flex min-h-full flex-col border-b border-zinc-200 py-7 sm:min-h-[19rem] sm:px-5 sm:[&:nth-child(odd)]:pl-0 sm:[&:nth-child(even)]:pr-0 lg:border-b-0 lg:border-r lg:px-6 lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+            className="flex min-w-0 flex-col rounded-3xl border border-zinc-200 bg-white p-6 sm:p-7"
           >
-            <p className="text-sm font-medium text-zinc-500">
+            <p className="text-sm font-medium leading-5 text-zinc-500">
               {actor.role} · {actor.koreanRole}
             </p>
-            <h4 className="mt-5 text-2xl font-semibold tracking-[-0.035em] text-zinc-950">
+            <h4 className="mt-4 text-2xl font-semibold leading-8 tracking-[-0.035em] text-zinc-950">
               {actor.task}
             </h4>
-            <p className="mt-3 flex-1 text-sm leading-6 text-zinc-600">
+            <p className="mt-3 text-base font-normal leading-7 text-zinc-600">
               {actor.description}
             </p>
-            <p className="mt-6 text-xs font-medium leading-5 text-zinc-400">
+            <p className="mt-auto pt-8 text-sm font-medium leading-5 text-zinc-400">
               {actor.keywords.join(" · ")}
             </p>
           </article>
         ))}
       </div>
-
-      <div className="grid gap-6 border-b border-zinc-300 py-7 md:grid-cols-2 md:gap-10">
-        <div>
-          <p className="text-xs font-medium tracking-[0.1em] text-zinc-950 uppercase">
-            Core Product Flow
-          </p>
-          <p className="mt-2 text-base font-medium text-zinc-950">
-            Viewer · Creator
-          </p>
-        </div>
-        <div>
-          <p className="text-xs font-medium tracking-[0.1em] text-zinc-400 uppercase">
-            Supporting Scope
-          </p>
-          <p className="mt-2 text-base font-medium text-zinc-600">
-            Space Operator · Admin
-          </p>
-        </div>
-      </div>
-
     </section>
   );
 }
@@ -224,6 +204,14 @@ export default function ArtieCaseStudyCore() {
                 사용자가 조건에 맞는 공간을 탐색하도록 설계한 PC 기반 전시
                 플랫폼입니다.
               </p>
+              <a
+                href="https://artie-blond.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-rose-500"
+              >
+                Visit Live Site ↗
+              </a>
             </div>
 
             <dl className="grid grid-cols-2 gap-x-5 gap-y-5 border-t border-rose-200 pt-6 lg:grid-cols-1 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">

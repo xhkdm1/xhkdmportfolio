@@ -1,6 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import ImageLightbox from "../../../components/ImageLightBox";
 import BackToTop from "./BackToTop";
 
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
@@ -271,8 +271,6 @@ export default function WithBuddyCaseStudyPage() {
             </div>
           </div>
 
-          <Image src="/images/withbuddy/01-product-overview.png" alt="WithBuddy 사용자 화면과 관리자 화면" width={1600} height={900} priority className="mt-8 w-full rounded-3xl border border-zinc-200" />
-
           <div className="mt-8 grid gap-4 md:grid-cols-3">
             <MetricCard value="1인" label="Product Designer" />
             <MetricCard value="MyBuddy · Admin" label="Product Scope" note="미답변과 문서 보강을 연결한 Core Loop" />
@@ -321,7 +319,14 @@ export default function WithBuddyCaseStudyPage() {
             “SOP가 있어도 어떤 내용을 찾기 위해 무슨 SOP를 봐야 하는지 몰라 사수에게 묻게 된다.”
             <footer className="mt-4 text-sm font-normal text-zinc-500">신입·실무자 심층 인터뷰</footer>
           </blockquote>
-          <Image src="/images/withbuddy/02-problem-diagram.png" alt="신입과 담당자의 온보딩 문제 구조" width={1920} height={1080} className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 object-contain" />
+          <div className="mt-8">
+            <ImageLightbox
+              src="/images/withbuddy/02-problem-diagram.png"
+              alt="신입과 담당자의 온보딩 문제 구조"
+              label="Problem Structure"
+              caption="신입의 정보 탐색과 담당자의 반복 응대가 만나는 지점"
+            />
+          </div>
         </Section>
 
         <Section id="reframing" eyebrow="02 · Reframing" title={<>질문할 곳을 만드는 데서,<br />반복 응대를 줄이는 구조로 문제를 넓혔습니다.</>} description="B2B 제품에서는 신입의 편의뿐 아니라 도입하고 운영하는 담당자에게도 줄어드는 부담이 있어야 한다고 봤습니다.">
@@ -335,7 +340,6 @@ export default function WithBuddyCaseStudyPage() {
             <article className="rounded-3xl border border-zinc-200 p-7"><p className="text-sm text-zinc-500">Buyer / Admin · HR · 총무 · 경영지원</p><p className="mt-4 text-xl font-semibold">반복 응대와 문서 관리 부담을 줄이고 싶다.</p></article>
           </div>
           <div className="mt-8 rounded-3xl bg-zinc-50 p-7"><p className="text-sm text-zinc-500">Target</p><p className="mt-3 text-2xl font-semibold">50인 이하 중소기업·스타트업</p></div>
-          <Image src="/images/withbuddy/05-landing-before-after.png" alt="신입 중심에서 구매자 중심으로 바꾼 랜딩 메시지" width={1920} height={1080} className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 object-contain" />
         </Section>
 
         <Section id="core-loop" eyebrow="03 · Core Loop" title={<>미답변 질문을 모아<br />어떤 문서가 부족한지 확인했습니다.</>} description="AI가 답하지 못한 질문은 Admin에 모았습니다. 담당자는 질문을 확인해 부족한 문서를 보강하고, 이후 유사 질문의 답변 근거로 활용할 수 있습니다.">
@@ -344,7 +348,14 @@ export default function WithBuddyCaseStudyPage() {
               <li key={number} className="rounded-3xl border border-zinc-200 p-6"><p className="text-sm text-zinc-400">STEP {number}</p><p className="mt-3 font-semibold">{title}</p></li>
             ))}
           </ol>
-          <Image src="/images/withbuddy/06-core-loop.png" alt="미답변을 관리자 확인과 문서 보강으로 연결한 운영 흐름" width={1920} height={1080} className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 object-contain" />
+          <div className="mt-8">
+            <ImageLightbox
+              src="/images/withbuddy/06-core-loop.png"
+              alt="미답변을 관리자 확인과 문서 보강으로 연결한 운영 흐름"
+              label="Core Loop"
+              caption="AI 미응답을 Admin의 문서 보강으로 연결"
+            />
+          </div>
         </Section>
 
         <Section id="decisions" eyebrow="04 · 주요 설계 판단" title="지켜야 할 건 남기고, 화면 방식은 바꿨습니다." description="개발 피드백과 정책 조건을 확인하며 필요한 정보는 유지하고 입력·안내 방식은 바꿨습니다.">
@@ -356,7 +367,14 @@ export default function WithBuddyCaseStudyPage() {
             <article className="rounded-3xl border border-zinc-200 p-7">
               <p className="text-sm text-zinc-500">MyBuddy</p><h3 className="mt-3 text-2xl font-semibold">질문과 답변의 경계를 알렸습니다.</h3>
               <div className="mt-6 grid gap-4 md:grid-cols-3">{[["Quick Tap", "첫 질문을 직접 만드는 부담을 낮췄습니다."], ["Source", "사내 문서 기반 답변의 근거를 확인하게 했습니다."], ["No Result / Out of Scope", "답변 실패와 서비스 범위 밖 상태를 구분했습니다."]].map(([title, text]) => <div key={title} className="rounded-2xl bg-zinc-50 p-5"><p className="font-medium">{title}</p><p className="mt-2 text-sm leading-6 text-zinc-600">{text}</p></div>)}</div>
-              <Image src="/images/withbuddy/01-product-overview.png" alt="WithBuddy 질문과 답변 화면" width={1920} height={1080} className="mt-8 h-auto w-full rounded-2xl border border-zinc-200 object-contain" />
+              <div className="mt-8">
+                <ImageLightbox
+                  src="/images/withbuddy/01-product-overview.png"
+                  alt="WithBuddy 질문과 답변 화면"
+                  label="MyBuddy"
+                  caption="사내 문서 기반 질문과 답변의 핵심 경험"
+                />
+              </div>
             </article>
             <article className="rounded-3xl bg-zinc-950 p-7 text-white">
               <p className="text-sm text-zinc-400">Admin Console</p><h3 className="mt-3 text-2xl font-semibold">문서와 계정의 상태를 관리하는 화면을 설계했습니다.</h3>
@@ -368,15 +386,38 @@ export default function WithBuddyCaseStudyPage() {
                   ["03 · 계정 상태", "활성화·비활성화·조회 전용 등 계정 상태를 구분하고, 상태에 따라 사용할 수 있는 기능을 다르게 보여줍니다."],
                 ].map(([title, text]) => <div key={title} className="rounded-2xl bg-white/5 p-5"><p className="font-medium">{title}</p><p className="mt-3 text-sm leading-6 text-zinc-300">{text}</p></div>)}
               </div>
-              <Image src="/images/withbuddy/08-admin-console.png" alt="WithBuddy 관리자 대시보드" width={1920} height={1080} className="mt-8 h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
-              <div className="mt-5 grid gap-5 md:grid-cols-2">
-                <Image src="/images/withbuddy/withbuddy-admin-docs.png" alt="등록 문서 목록과 문서 관리 상태를 보여주는 관리자 화면" width={1440} height={1146} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
-                <Image src="/images/withbuddy/withbuddy-admin-account-create-validation.png" alt="입사일과 필수 정보 검증을 포함한 관리자 계정 생성 화면" width={1440} height={1024} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain" />
-                <Image src="/images/withbuddy/withbuddy-admin-account-list-status.png" alt="계정 활성화와 비활성화 상태를 구분한 관리자 계정 목록" width={1440} height={1024} className="h-auto w-full rounded-2xl border border-white/10 bg-white object-contain md:col-span-2" />
+              <div className="mt-8">
+                <ImageLightbox
+                  src="/images/withbuddy/withbuddy-admin-docs.png"
+                  alt="등록 문서 목록과 문서 관리 상태를 보여주는 관리자 화면"
+                  label="Admin · Documents"
+                  caption="미응답 이후 답변 근거가 되는 문서를 관리"
+                  aspectClassName="aspect-[16/10]"
+                  dark
+                />
+              </div>
+              <div className="mt-7 grid items-stretch gap-5 md:grid-cols-2">
+                <ImageLightbox
+                  src="/images/withbuddy/withbuddy-admin-account-create-validation.png"
+                  alt="입사일과 필수 정보 검증을 포함한 관리자 계정 생성 화면"
+                  label="Account Creation"
+                  caption="입사일과 필수 조건을 생성 단계에서 검증"
+                  aspectClassName="aspect-[4/3]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  dark
+                />
+                <ImageLightbox
+                  src="/images/withbuddy/withbuddy-admin-account-list-status.png"
+                  alt="계정 활성화와 비활성화 상태를 구분한 관리자 계정 목록"
+                  label="Account State"
+                  caption="활성화와 비활성화 상태를 목록에서 관리"
+                  aspectClassName="aspect-[4/3]"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  dark
+                />
               </div>
             </article>
           </div>
-          <Image src="/images/withbuddy/07-mybuddy-states.png" alt="WithBuddy 답변 상태별 사용자 화면" width={1920} height={1080} className="mt-8 h-auto w-full rounded-3xl border border-zinc-200 object-contain" />
         </Section>
 
         <Section id="validation" eyebrow="06 · 검증과 개선" title={<>사용하면서 다시 사람을 찾게 되는<br />지점을 확인했습니다.</>} description="2026년 7월 4일부터 9일까지 13명이 참여한 제한적 오픈테스트와 사용 로그를 분석했습니다. 관리자 화면은 10명이 사용했습니다. 실제 조직의 온보딩 기간 전체를 검증한 결과는 아닙니다.">
@@ -392,6 +433,16 @@ export default function WithBuddyCaseStudyPage() {
 
         <Section id="delivery" eyebrow="07 · 개발 전달" title={<>개발에 필요한 상태·예외·검증 기준을<br />화면에 함께 정리했습니다.</>}>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{[["Screen ID", "화면과 상태를 같은 기준으로 식별했습니다."], ["Annotation", "Usage · State · Behavior · Validation · Data/API · A11y를 기록했습니다."], ["Handoff", "디자인과 개발에서 사용하는 명칭과 조건을 정리했습니다."], ["QA", "테스트 시나리오로 동작을 확인하고 오류의 재현 조건과 예상 결과를 전달했습니다."]].map(([title, text]) => <article key={title} className="rounded-3xl border border-zinc-200 p-6"><h3 className="font-semibold">{title}</h3><p className="mt-4 text-sm leading-6 text-zinc-600">{text}</p></article>)}</div>
+          <div className="mt-8 max-w-2xl">
+            <ImageLightbox
+              src="/images/withbuddy/withbuddy-api-state-ui-mapping.png"
+              alt="API 응답 상태와 UI 조건을 연결한 개발 전달 문서"
+              label="Delivery · API State"
+              caption="API 응답 상태를 화면 조건과 연결"
+              aspectClassName="aspect-[4/3]"
+              sizes="(max-width: 768px) 100vw, 672px"
+            />
+          </div>
           <div className="mt-8 flex flex-wrap gap-3"><Link href="/projects/withbuddy/wds" className="inline-flex rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white">WDS 상세 보기 →</Link><a href={WDS_URL} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full border border-zinc-200 px-5 py-3 text-sm font-medium">Open WDS in Figma ↗</a></div>
         </Section>
 

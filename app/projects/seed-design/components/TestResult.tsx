@@ -1,3 +1,5 @@
+import ImageLightbox from "../../../components/ImageLightBox";
+
 const testMetrics = [
   {
     value: "77.8%",
@@ -16,31 +18,26 @@ const testMetrics = [
   },
   {
     value: "100%",
-    label: "실제 화면 제작 가능성",
+    label: "화면 제작 가능성 항목",
     detail: "전원 4–5점 응답 · 평균 4.67/5",
   },
 ];
 
 const testFindings = [
   {
-    title: "컴포넌트의 역할은 쉽게 이해했습니다.",
+    title: "역할 이해: 컴포넌트 종류는 비교적 빠르게 판단했습니다.",
     description:
       "필요한 컴포넌트의 종류를 빠르게 판단했고, Property와 Style의 차이도 비교적 쉽게 이해했습니다.",
   },
   {
-    title: "정확한 컴포넌트를 찾는 과정에서 막혔습니다.",
+    title: "Findability: 정확한 컴포넌트를 찾는 과정에서 막혔습니다.",
     description:
       "비슷한 컴포넌트와 Chip이 한곳에 모여 있어 원하는 항목을 하나씩 확인해야 한다는 의견이 있었습니다.",
   },
   {
-    title: "Variable 이름의 직관성이 부족했습니다.",
+    title: "Naming / Property: Variable과 Chip 구조에서 혼란이 있었습니다.",
     description:
-      "축약된 이름만으로 색상과 폰트의 용도를 추측하기 어려웠고, 비슷한 컬러를 구분하기 어렵다는 피드백이 있었습니다.",
-  },
-  {
-    title: "Chip 구조의 단순화가 필요했습니다.",
-    description:
-      "Chip의 Size와 Property가 많고 Text Property가 연결되지 않아 조정 과정이 복잡하다는 의견이 있었습니다.",
+      "축약된 Variable 이름으로 용도를 추측하기 어려웠고, Chip의 Size와 Property가 많아 조정 과정이 복잡하다는 의견이 있었습니다.",
   },
 ];
 
@@ -170,13 +167,24 @@ export default function TestResult() {
         </div>
       </div>
 
+      <div className="mt-12 max-w-3xl">
+        <ImageLightbox
+          src="/images/seed-design/questionnaire-response.png"
+          alt="Component Assembly Test 참여자 한 명의 질문지 응답 예시"
+          label="Participant Response"
+          caption="조립 가능성, 탐색, Variable 적용 경험을 확인한 참여자 응답 예시입니다."
+          aspectClassName="aspect-[3/4]"
+          sizes="(max-width: 768px) 100vw, 768px"
+        />
+      </div>
+
       <div className="mt-14 rounded-3xl bg-zinc-950 p-6 text-white sm:p-8">
         <p className="text-sm font-medium text-orange-400">
-          Improvements After QA
+          Next Direction
         </p>
 
         <h3 className="mt-4 text-2xl font-semibold tracking-tight">
-          피드백을 구조 개선 항목으로 전환했습니다.
+          확인한 문제를 다음 개선 방향으로 정리했습니다.
         </h3>
 
         <div className="mt-8 grid gap-3 md:grid-cols-2">

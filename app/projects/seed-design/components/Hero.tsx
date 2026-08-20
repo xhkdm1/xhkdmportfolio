@@ -1,4 +1,5 @@
-import ImagePlaceholder from "./ImagePlaceholder";
+const FIGMA_URL =
+  "https://www.figma.com/design/KeYc266vSKOLSVe7R5trLB/seed-design_cloning?node-id=256-4558&t=9sD23mhvTpmQIBIO-11";
 
 const tags = ["Design System", "Figma Variables", "Component QA"];
 
@@ -17,23 +18,19 @@ export default function Hero() {
         Rebuild & QA
       </h1>
 
-      <div className="mt-8">
-        <a
-          href="https://www.figma.com/design/KeYc266vSKOLSVe7R5trLB/seed-design_cloning?node-id=5-9827&t=6Mvg1NONPsVG1r1Q-1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full border border-zinc-200 px-5 py-3 text-sm font-medium text-zinc-800 transition hover:border-zinc-300 hover:bg-zinc-50"
-        >
-          View Full Design File
-          <span>↗</span>
-        </a>
-      </div>
-
       <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl">
         공개된 Seed Design System을 Primitive와 Semantic 구조로 재구성한 뒤,
         다른 디자이너가 실제 화면을 조립할 수 있는지를 Component Assembly
         Test로 검증했습니다.
       </p>
+      <a
+        href={FIGMA_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-8 inline-flex items-center rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white transition hover:bg-zinc-800"
+      >
+        Figma 작업물 보기 ↗
+      </a>
       <div className="mt-8 flex flex-wrap gap-2">
         {tags.map((tag) => (
           <span
@@ -44,13 +41,6 @@ export default function Hero() {
           </span>
         ))}
       </div>
-      <div className="mt-12">
-        <ImagePlaceholder
-          src="/images/seed-design/hero.webp"
-          label="Foundation · Component · Assembly Test"
-        />
-      </div>
-
       <div className="mt-10 space-y-3 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-3 sm:space-y-4 sm:p-4">
         <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
           {[
