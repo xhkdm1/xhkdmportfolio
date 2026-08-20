@@ -67,8 +67,9 @@ export default function WithBuddyPage() {
     <main className="min-h-screen bg-white text-zinc-950">
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-12">
         {/* Hero */}
-        <section className="grid gap-10 pb-20 pt-28 sm:pb-28 sm:pt-36 lg:grid-cols-[1fr_1.1fr] lg:items-center lg:pb-32 lg:pt-40">
-          <div>
+        <section className="pb-2 pt-28 sm:pb-4 sm:pt-36 lg:pb-6 lg:pt-40">
+          <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+            <div>
             <p className="mb-3 text-sm text-zinc-500">
               B2B SaaS · AI Agent · Product Design
             </p>
@@ -102,46 +103,88 @@ export default function WithBuddyPage() {
                 View Landing Page ↗
               </a>
             </div>
-          </div>
-
-          <a
-            href={PRODUCT_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-lg"
-          >
-            <div className="overflow-hidden rounded-[1.2rem] bg-white">
-              <Image
-                src="/images/withbuddy/withbuddy-thumbnail-v2.png"
-                alt="WithBuddy product preview"
-                width={1920}
-                height={1080}
-                draggable={false}
-                className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.01]"
-                priority
-              />
             </div>
 
-            <div className="flex items-center justify-between px-2 pb-1 pt-4">
-              <div>
-                <p className="text-sm font-medium text-zinc-900">
-                  Live Product
-                </p>
-
-                <p className="mt-1 text-sm text-zinc-500">
-                  실제 서비스 체험하기
-                </p>
+            <a
+              href={PRODUCT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-50 p-3 transition hover:-translate-y-1 hover:border-zinc-300 hover:shadow-lg"
+            >
+              <div className="overflow-hidden rounded-[1.2rem] bg-white">
+                <Image
+                  src="/images/withbuddy/withbuddy-thumbnail-v2.png"
+                  alt="WithBuddy product preview"
+                  width={1920}
+                  height={1080}
+                  draggable={false}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.01]"
+                  priority
+                />
               </div>
 
-              <span className="text-lg text-zinc-500">↗</span>
+              <div className="flex items-center justify-between px-2 pb-1 pt-4">
+                <div>
+                  <p className="text-sm font-medium text-zinc-900">
+                    Live Product
+                  </p>
+
+                  <p className="mt-1 text-sm text-zinc-500">
+                    실제 서비스 체험하기
+                  </p>
+                </div>
+
+                <span className="text-lg text-zinc-500">↗</span>
+              </div>
+            </a>
+          </div>
+
+          <TrialAccountGuide />
+
+          <div className="mt-12 space-y-3 rounded-[2rem] border border-zinc-200 bg-zinc-50 p-3 sm:mt-16 sm:space-y-4 sm:p-4">
+            <dl className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-4">
+              {[
+                ["Role", "Product Designer"],
+                ["Team", "6인"],
+                ["Duration", "2026.03 – 07"],
+                ["Tools", "Figma"],
+              ].map(([label, value]) => (
+                <div key={label} className="flex min-h-[112px] min-w-0 flex-col justify-between rounded-2xl border border-zinc-200 bg-white p-5 sm:min-h-[124px] sm:p-6">
+                  <dt className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">{label}</dt>
+                  <dd className="mt-5 break-words text-base font-semibold leading-6 tracking-[-0.01em] text-zinc-900 sm:text-lg">{value}</dd>
+                </div>
+              ))}
+            </dl>
+
+            <div className="grid gap-3 sm:gap-4 lg:grid-cols-2">
+              <div className="flex h-full min-h-[168px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">Contribution</p>
+                <p className="mt-5 text-xl font-semibold leading-7 tracking-[-0.02em]">Product Design · Design System · QA</p>
+                <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-600">제품 UI와 Admin Console, WDS, 화면 상태와 QA 기준을 설계했습니다.</p>
+              </div>
+
+              <div className="flex h-full min-h-[168px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 sm:p-7">
+                <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">AI Tools</p>
+                <div className="mt-5 flex max-w-md flex-wrap content-start gap-2">
+                  {["ChatGPT", "Claude", "Figma Make", "Codex", "Stitch"].map((tool) => (
+                    <span key={tool} className="rounded-full border border-zinc-200 bg-zinc-50 px-3.5 py-2 text-xs font-medium text-zinc-700">{tool}</span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </a>
+
+            <div className="grid rounded-2xl bg-zinc-950 p-6 text-white sm:p-7 md:grid-cols-[160px_1fr] md:gap-8">
+              <p className="text-xs font-medium uppercase tracking-[0.12em] text-zinc-400">Project Outcome</p>
+              <div className="mt-5 min-w-0 md:mt-0">
+                <p className="text-xl font-semibold leading-8 tracking-[-0.025em] sm:text-2xl">MyBuddy와 Admin을 연결한 핵심 흐름을 설계했습니다.</p>
+                <p className="mt-3 text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">WDS·Handoff·QA 기준을 구현 단계에 맞춰 정리했습니다.</p>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <TrialAccountGuide />
-
         {/* Documentation */}
-        <section className="border-t border-zinc-200 py-20 sm:py-24 lg:py-28">
+        <section className="border-t border-zinc-200 pb-20 pt-16 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-24">
           <div className="mb-10 max-w-3xl">
             <p className="text-sm text-zinc-500">
               Project Documentation

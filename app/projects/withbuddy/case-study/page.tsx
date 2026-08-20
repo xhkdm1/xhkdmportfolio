@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
-import TrialAccountGuide from "../TrialAccountGuide";
 import BackToTop from "./BackToTop";
 
 const PRODUCT_URL = "https://withbuddy.itsdev.kr/login";
@@ -221,8 +220,8 @@ function DecisionCard({ decision }: { decision: (typeof decisions)[number] }) {
 export default function WithBuddyCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white text-zinc-950">
-      <div className="mx-auto w-full max-w-6xl px-5 pb-20 pt-28 sm:px-8 sm:pb-28 sm:pt-36 lg:px-12 lg:pb-32 lg:pt-40">
-        <div className="mb-10 flex items-center gap-2 text-sm text-zinc-500">
+      <div className="mx-auto w-full max-w-6xl px-5 pb-20 pt-20 sm:px-8 sm:pb-28 sm:pt-24 lg:px-12 lg:pb-32 lg:pt-28">
+        <div className="mb-7 flex items-center gap-2 text-sm text-zinc-500 sm:mb-8">
           <Link href="/projects/withbuddy" className="hover:text-zinc-900">
             WithBuddy
           </Link>
@@ -230,22 +229,22 @@ export default function WithBuddyCaseStudyPage() {
           <span>Case Study</span>
         </div>
 
-        <section id="overview" className="scroll-mt-24 pb-20 sm:pb-28 lg:pb-32">
-          <p className="mb-5 text-sm font-medium text-zinc-500">
+        <section id="overview" className="scroll-mt-24 pb-16 sm:pb-20 lg:pb-24">
+          <p className="mb-4 text-sm font-medium text-zinc-500">
             B2B SaaS · AI Agent · Product Design
           </p>
-          <h1 className="max-w-4xl text-4xl font-semibold leading-[1.08] tracking-[-0.055em] sm:text-6xl lg:text-7xl">
+          <h1 className="max-w-5xl text-4xl font-semibold leading-[1.1] tracking-[-0.05em] sm:text-5xl lg:text-6xl">
             AI가 답하지 못한 질문을,
             <br className="hidden sm:block" /> 다음 온보딩의 문서 보강으로
             연결했습니다.
           </h1>
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
+          <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-600 sm:text-xl sm:leading-9">
             신입의 반복 질문을 사내 문서 기반 AI가 먼저 처리하고,
             미답변은 담당자가 확인·보강해 이후 유사 질문에 활용하는 B2B
             온보딩 서비스입니다.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-3">
+          <div className="mt-8 flex flex-wrap gap-3">
             <a href={PRODUCT_URL} target="_blank" rel="noopener noreferrer" className="inline-flex rounded-full bg-zinc-950 px-5 py-3 text-sm font-medium text-white">
               Try Product ↗
             </a>
@@ -254,9 +253,7 @@ export default function WithBuddyCaseStudyPage() {
             </a>
           </div>
 
-          <TrialAccountGuide />
-
-          <div className="mt-14 grid gap-4 rounded-3xl border border-zinc-200 p-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 rounded-3xl border border-zinc-200 p-6 md:grid-cols-3">
             <div>
               <p className="text-sm text-zinc-500">Role</p>
               <p className="mt-2 font-medium">Product Designer</p>
